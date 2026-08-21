@@ -1,0 +1,2233 @@
+{
+  "source": "https://gamma-api.polymarket.com/public-search",
+  "query": "weather",
+  "collected_at": "2026-08-21T15:46:23.845759+00:00",
+  "market_count": 89,
+  "markets": [
+    {
+      "event_id": "874082",
+      "event": "Highest temperature in Hong Kong on August 21?",
+      "market_id": "3715081",
+      "question": "Will the highest temperature in Hong Kong be 31\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.9995,
+        0.0005
+      ],
+      "best_bid": 0.999,
+      "best_ask": 1.0,
+      "spread": 0.001,
+      "liquidity": 34296.74973,
+      "volume_24h": 46445.300098,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-hong-kong-on-august-21-2026-31c"
+    },
+    {
+      "event_id": "874082",
+      "event": "Highest temperature in Hong Kong on August 21?",
+      "market_id": "3715078",
+      "question": "Will the highest temperature in Hong Kong be 28\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 24753.286,
+      "volume_24h": 36085.787930000006,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-hong-kong-on-august-21-2026-28c"
+    },
+    {
+      "event_id": "874082",
+      "event": "Highest temperature in Hong Kong on August 21?",
+      "market_id": "3715082",
+      "question": "Will the highest temperature in Hong Kong be 32\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 20956.95916,
+      "volume_24h": 33663.022381999996,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-hong-kong-on-august-21-2026-32c"
+    },
+    {
+      "event_id": "874093",
+      "event": "Highest temperature in Shenzhen on August 21?",
+      "market_id": "3715200",
+      "question": "Will the highest temperature in Shenzhen be 30\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 13202.23509,
+      "volume_24h": 29802.811915000002,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-shenzhen-on-august-21-2026-30c"
+    },
+    {
+      "event_id": "874082",
+      "event": "Highest temperature in Hong Kong on August 21?",
+      "market_id": "3715079",
+      "question": "Will the highest temperature in Hong Kong be 29\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 30348.9797,
+      "volume_24h": 25244.276201,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-hong-kong-on-august-21-2026-29c"
+    },
+    {
+      "event_id": "874082",
+      "event": "Highest temperature in Hong Kong on August 21?",
+      "market_id": "3715080",
+      "question": "Will the highest temperature in Hong Kong be 30\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 27193.62269,
+      "volume_24h": 24947.965749000003,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-hong-kong-on-august-21-2026-30c"
+    },
+    {
+      "event_id": "874083",
+      "event": "Highest temperature in Shanghai on August 21?",
+      "market_id": "3715092",
+      "question": "Will the highest temperature in Shanghai be 31\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.9995,
+        0.0005
+      ],
+      "best_bid": 0.999,
+      "best_ask": 1.0,
+      "spread": 0.001,
+      "liquidity": 4439.37865,
+      "volume_24h": 23695.682968999998,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-shanghai-on-august-21-2026-31c"
+    },
+    {
+      "event_id": "874082",
+      "event": "Highest temperature in Hong Kong on August 21?",
+      "market_id": "3715083",
+      "question": "Will the highest temperature in Hong Kong be 33\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 12917.31507,
+      "volume_24h": 19944.220202000008,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-hong-kong-on-august-21-2026-33c"
+    },
+    {
+      "event_id": "874079",
+      "event": "Highest temperature in Munich on August 21?",
+      "market_id": "3715048",
+      "question": "Will the highest temperature in Munich be 21\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 24587.73464,
+      "volume_24h": 19139.786666000004,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-munich-on-august-21-2026-21c"
+    },
+    {
+      "event_id": "874073",
+      "event": "Highest temperature in London on August 21?",
+      "market_id": "3714982",
+      "question": "Will the highest temperature in London be 24\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0015,
+        0.9985
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.002,
+      "spread": 0.001,
+      "liquidity": 2376.01747,
+      "volume_24h": 18496.891219,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-london-on-august-21-2026-24c"
+    },
+    {
+      "event_id": "874079",
+      "event": "Highest temperature in Munich on August 21?",
+      "market_id": "3715049",
+      "question": "Will the highest temperature in Munich be 22\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.998,
+        0.002
+      ],
+      "best_bid": 0.997,
+      "best_ask": 0.999,
+      "spread": 0.002,
+      "liquidity": 1804.68315,
+      "volume_24h": 18003.161772000007,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-munich-on-august-21-2026-22c"
+    },
+    {
+      "event_id": "874097",
+      "event": "Highest temperature in Amsterdam on August 21?",
+      "market_id": "3715241",
+      "question": "Will the highest temperature in Amsterdam be 17\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 25983.21298,
+      "volume_24h": 17290.817567,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-amsterdam-on-august-21-2026-17c"
+    },
+    {
+      "event_id": "874083",
+      "event": "Highest temperature in Shanghai on August 21?",
+      "market_id": "3715093",
+      "question": "Will the highest temperature in Shanghai be 32\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 4606.85981,
+      "volume_24h": 14836.758186000003,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-shanghai-on-august-21-2026-32c"
+    },
+    {
+      "event_id": "874093",
+      "event": "Highest temperature in Shenzhen on August 21?",
+      "market_id": "3715205",
+      "question": "Will the highest temperature in Shenzhen be 35\u00b0C or higher on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 2801.03337,
+      "volume_24h": 14461.74195,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-shenzhen-on-august-21-2026-35corhigher"
+    },
+    {
+      "event_id": "874074",
+      "event": "Highest temperature in Paris on August 21?",
+      "market_id": "3714988",
+      "question": "Will the highest temperature in Paris be 22\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 22786.53895,
+      "volume_24h": 13809.868091,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-paris-on-august-21-2026-22c"
+    },
+    {
+      "event_id": "874093",
+      "event": "Highest temperature in Shenzhen on August 21?",
+      "market_id": "3715204",
+      "question": "Will the highest temperature in Shenzhen be 34\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 3480.28785,
+      "volume_24h": 13701.531879999999,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-shenzhen-on-august-21-2026-34c"
+    },
+    {
+      "event_id": "874073",
+      "event": "Highest temperature in London on August 21?",
+      "market_id": "3714978",
+      "question": "Will the highest temperature in London be 20\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 31994.25555,
+      "volume_24h": 13102.417786000004,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-london-on-august-21-2026-20c"
+    },
+    {
+      "event_id": "874079",
+      "event": "Highest temperature in Munich on August 21?",
+      "market_id": "3715050",
+      "question": "Will the highest temperature in Munich be 23\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 1962.87525,
+      "volume_24h": 12958.926581999998,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-munich-on-august-21-2026-23c"
+    },
+    {
+      "event_id": "874079",
+      "event": "Highest temperature in Munich on August 21?",
+      "market_id": "3715051",
+      "question": "Will the highest temperature in Munich be 24\u00b0C or higher on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 2833.75569,
+      "volume_24h": 12292.536811000002,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-munich-on-august-21-2026-24corhigher"
+    },
+    {
+      "event_id": "874073",
+      "event": "Highest temperature in London on August 21?",
+      "market_id": "3714981",
+      "question": "Will the highest temperature in London be 23\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.015,
+        0.985
+      ],
+      "best_bid": 0.01,
+      "best_ask": 0.02,
+      "spread": 0.01,
+      "liquidity": 914.8102,
+      "volume_24h": 12208.384790000002,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-london-on-august-21-2026-23c"
+    },
+    {
+      "event_id": "874074",
+      "event": "Highest temperature in Paris on August 21?",
+      "market_id": "3714989",
+      "question": "Will the highest temperature in Paris be 23\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 23110.50025,
+      "volume_24h": 11911.755433999997,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-paris-on-august-21-2026-23c"
+    },
+    {
+      "event_id": "874082",
+      "event": "Highest temperature in Hong Kong on August 21?",
+      "market_id": "3715084",
+      "question": "Will the highest temperature in Hong Kong be 34\u00b0C or higher on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 12484.9976,
+      "volume_24h": 11830.237652000002,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-hong-kong-on-august-21-2026-34corhigher"
+    },
+    {
+      "event_id": "874093",
+      "event": "Highest temperature in Shenzhen on August 21?",
+      "market_id": "3715201",
+      "question": "Will the highest temperature in Shenzhen be 31\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.9995,
+        0.0005
+      ],
+      "best_bid": 0.999,
+      "best_ask": 1.0,
+      "spread": 0.001,
+      "liquidity": 2663.74495,
+      "volume_24h": 11726.749612000001,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-shenzhen-on-august-21-2026-31c"
+    },
+    {
+      "event_id": "874090",
+      "event": "Highest temperature in Beijing on August 21?",
+      "market_id": "3715168",
+      "question": "Will the highest temperature in Beijing be 33\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 28849.88309,
+      "volume_24h": 11626.549342999999,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-beijing-on-august-21-2026-33c"
+    },
+    {
+      "event_id": "874074",
+      "event": "Highest temperature in Paris on August 21?",
+      "market_id": "3714986",
+      "question": "Will the highest temperature in Paris be 20\u00b0C or below on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 33829.89411,
+      "volume_24h": 11509.772607,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-paris-on-august-21-2026-20corbelow"
+    },
+    {
+      "event_id": "874090",
+      "event": "Highest temperature in Beijing on August 21?",
+      "market_id": "3715171",
+      "question": "Will the highest temperature in Beijing be 36\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 6160.00222,
+      "volume_24h": 10938.479022,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-beijing-on-august-21-2026-36c"
+    },
+    {
+      "event_id": "874073",
+      "event": "Highest temperature in London on August 21?",
+      "market_id": "3714977",
+      "question": "Will the highest temperature in London be 19\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 32812.51218,
+      "volume_24h": 10600.91715,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-london-on-august-21-2026-19c"
+    },
+    {
+      "event_id": "874082",
+      "event": "Highest temperature in Hong Kong on August 21?",
+      "market_id": "3715077",
+      "question": "Will the highest temperature in Hong Kong be 27\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 29827.37314,
+      "volume_24h": 10345.584587000001,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-hong-kong-on-august-21-2026-27c"
+    },
+    {
+      "event_id": "874093",
+      "event": "Highest temperature in Shenzhen on August 21?",
+      "market_id": "3715198",
+      "question": "Will the highest temperature in Shenzhen be 28\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 13232.78205,
+      "volume_24h": 10281.36538,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-shenzhen-on-august-21-2026-28c"
+    },
+    {
+      "event_id": "874083",
+      "event": "Highest temperature in Shanghai on August 21?",
+      "market_id": "3715094",
+      "question": "Will the highest temperature in Shanghai be 33\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 5818.77771,
+      "volume_24h": 10086.046198000002,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-shanghai-on-august-21-2026-33c"
+    },
+    {
+      "event_id": "874090",
+      "event": "Highest temperature in Beijing on August 21?",
+      "market_id": "3715166",
+      "question": "Will the highest temperature in Beijing be 31\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 28477.32777,
+      "volume_24h": 9605.334329,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-beijing-on-august-21-2026-31c"
+    },
+    {
+      "event_id": "874073",
+      "event": "Highest temperature in London on August 21?",
+      "market_id": "3714980",
+      "question": "Will the highest temperature in London be 22\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.185,
+        0.815
+      ],
+      "best_bid": 0.18,
+      "best_ask": 0.19,
+      "spread": 0.01,
+      "liquidity": 501.5552,
+      "volume_24h": 9187.245039,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-london-on-august-21-2026-22c"
+    },
+    {
+      "event_id": "874074",
+      "event": "Highest temperature in Paris on August 21?",
+      "market_id": "3714991",
+      "question": "Will the highest temperature in Paris be 25\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0015,
+        0.9985
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.002,
+      "spread": 0.001,
+      "liquidity": 2591.22006,
+      "volume_24h": 8701.524419000001,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-paris-on-august-21-2026-25c"
+    },
+    {
+      "event_id": "874074",
+      "event": "Highest temperature in Paris on August 21?",
+      "market_id": "3714990",
+      "question": "Will the highest temperature in Paris be 24\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.997,
+        0.003
+      ],
+      "best_bid": 0.995,
+      "best_ask": 0.999,
+      "spread": 0.004,
+      "liquidity": 2389.29575,
+      "volume_24h": 8431.470394999998,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-paris-on-august-21-2026-24c"
+    },
+    {
+      "event_id": "874073",
+      "event": "Highest temperature in London on August 21?",
+      "market_id": "3714979",
+      "question": "Will the highest temperature in London be 21\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.815,
+        0.185
+      ],
+      "best_bid": 0.81,
+      "best_ask": 0.82,
+      "spread": 0.01,
+      "liquidity": 248.2304,
+      "volume_24h": 8428.579172,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-london-on-august-21-2026-21c"
+    },
+    {
+      "event_id": "874074",
+      "event": "Highest temperature in Paris on August 21?",
+      "market_id": "3714992",
+      "question": "Will the highest temperature in Paris be 26\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 3491.79609,
+      "volume_24h": 8371.589744,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-paris-on-august-21-2026-26c"
+    },
+    {
+      "event_id": "874097",
+      "event": "Highest temperature in Amsterdam on August 21?",
+      "market_id": "3715242",
+      "question": "Will the highest temperature in Amsterdam be 18\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 26851.6561,
+      "volume_24h": 8358.318314,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-amsterdam-on-august-21-2026-18c"
+    },
+    {
+      "event_id": "874074",
+      "event": "Highest temperature in Paris on August 21?",
+      "market_id": "3714987",
+      "question": "Will the highest temperature in Paris be 21\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 24301.0001,
+      "volume_24h": 8180.357081000001,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-paris-on-august-21-2026-21c"
+    },
+    {
+      "event_id": "874079",
+      "event": "Highest temperature in Munich on August 21?",
+      "market_id": "3715047",
+      "question": "Will the highest temperature in Munich be 20\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 25747.35099,
+      "volume_24h": 8162.966246,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-munich-on-august-21-2026-20c"
+    },
+    {
+      "event_id": "874097",
+      "event": "Highest temperature in Amsterdam on August 21?",
+      "market_id": "3715244",
+      "question": "Will the highest temperature in Amsterdam be 20\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.91,
+        0.09
+      ],
+      "best_bid": 0.9,
+      "best_ask": 0.92,
+      "spread": 0.02,
+      "liquidity": 239.2742,
+      "volume_24h": 7791.613097,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-amsterdam-on-august-21-2026-20c"
+    },
+    {
+      "event_id": "874083",
+      "event": "Highest temperature in Shanghai on August 21?",
+      "market_id": "3715091",
+      "question": "Will the highest temperature in Shanghai be 30\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 39885.7793,
+      "volume_24h": 7722.801523,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-shanghai-on-august-21-2026-30c"
+    },
+    {
+      "event_id": "874090",
+      "event": "Highest temperature in Beijing on August 21?",
+      "market_id": "3715170",
+      "question": "Will the highest temperature in Beijing be 35\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 6335.01467,
+      "volume_24h": 7623.4513099999995,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-beijing-on-august-21-2026-35c"
+    },
+    {
+      "event_id": "874093",
+      "event": "Highest temperature in Shenzhen on August 21?",
+      "market_id": "3715203",
+      "question": "Will the highest temperature in Shenzhen be 33\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 3233.72924,
+      "volume_24h": 7361.46314,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-shenzhen-on-august-21-2026-33c"
+    },
+    {
+      "event_id": "874097",
+      "event": "Highest temperature in Amsterdam on August 21?",
+      "market_id": "3715247",
+      "question": "Will the highest temperature in Amsterdam be 23\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 1078.96375,
+      "volume_24h": 7335.980004,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-amsterdam-on-august-21-2026-23c"
+    },
+    {
+      "event_id": "874093",
+      "event": "Highest temperature in Shenzhen on August 21?",
+      "market_id": "3715202",
+      "question": "Will the highest temperature in Shenzhen be 32\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 2945.71155,
+      "volume_24h": 7135.356809000001,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-shenzhen-on-august-21-2026-32c"
+    },
+    {
+      "event_id": "874097",
+      "event": "Highest temperature in Amsterdam on August 21?",
+      "market_id": "3715245",
+      "question": "Will the highest temperature in Amsterdam be 21\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.085,
+        0.915
+      ],
+      "best_bid": 0.08,
+      "best_ask": 0.09,
+      "spread": 0.01,
+      "liquidity": 284.7858,
+      "volume_24h": 7033.265770000001,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-amsterdam-on-august-21-2026-21c"
+    },
+    {
+      "event_id": "874097",
+      "event": "Highest temperature in Amsterdam on August 21?",
+      "market_id": "3715243",
+      "question": "Will the highest temperature in Amsterdam be 19\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 24190.82815,
+      "volume_24h": 6899.455962999999,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-amsterdam-on-august-21-2026-19c"
+    },
+    {
+      "event_id": "874090",
+      "event": "Highest temperature in Beijing on August 21?",
+      "market_id": "3715167",
+      "question": "Will the highest temperature in Beijing be 32\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 28526.5503,
+      "volume_24h": 6452.9748260000015,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-beijing-on-august-21-2026-32c"
+    },
+    {
+      "event_id": "874073",
+      "event": "Highest temperature in London on August 21?",
+      "market_id": "3714983",
+      "question": "Will the highest temperature in London be 25\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 4828.13701,
+      "volume_24h": 6345.939195,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-london-on-august-21-2026-25c"
+    },
+    {
+      "event_id": "874097",
+      "event": "Highest temperature in Amsterdam on August 21?",
+      "market_id": "3715246",
+      "question": "Will the highest temperature in Amsterdam be 22\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.002,
+        0.998
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.003,
+      "spread": 0.002,
+      "liquidity": 551.44684,
+      "volume_24h": 6056.1574980000005,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-amsterdam-on-august-21-2026-22c"
+    },
+    {
+      "event_id": "874093",
+      "event": "Highest temperature in Shenzhen on August 21?",
+      "market_id": "3715199",
+      "question": "Will the highest temperature in Shenzhen be 29\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 14851.00949,
+      "volume_24h": 6043.806057999998,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-shenzhen-on-august-21-2026-29c"
+    },
+    {
+      "event_id": "874090",
+      "event": "Highest temperature in Beijing on August 21?",
+      "market_id": "3715169",
+      "question": "Will the highest temperature in Beijing be 34\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.9995,
+        0.0005
+      ],
+      "best_bid": 0.999,
+      "best_ask": 1.0,
+      "spread": 0.001,
+      "liquidity": 7453.72443,
+      "volume_24h": 6000.348435000001,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-beijing-on-august-21-2026-34c"
+    },
+    {
+      "event_id": "874093",
+      "event": "Highest temperature in Shenzhen on August 21?",
+      "market_id": "3715197",
+      "question": "Will the highest temperature in Shenzhen be 27\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 4699.61503,
+      "volume_24h": 5793.039136,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-shenzhen-on-august-21-2026-27c"
+    },
+    {
+      "event_id": "874090",
+      "event": "Highest temperature in Beijing on August 21?",
+      "market_id": "3715172",
+      "question": "Will the highest temperature in Beijing be 37\u00b0C or higher on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 6959.00278,
+      "volume_24h": 5713.876333000001,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-beijing-on-august-21-2026-37corhigher"
+    },
+    {
+      "event_id": "874073",
+      "event": "Highest temperature in London on August 21?",
+      "market_id": "3714975",
+      "question": "Will the highest temperature in London be 17\u00b0C or below on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 32964.6034,
+      "volume_24h": 5582.258,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-london-on-august-21-2026-17corbelow"
+    },
+    {
+      "event_id": "874079",
+      "event": "Highest temperature in Munich on August 21?",
+      "market_id": "3715045",
+      "question": "Will the highest temperature in Munich be 18\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 26593.44628,
+      "volume_24h": 5141.044826000001,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-munich-on-august-21-2026-18c"
+    },
+    {
+      "event_id": "874074",
+      "event": "Highest temperature in Paris on August 21?",
+      "market_id": "3714994",
+      "question": "Will the highest temperature in Paris be 28\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 4744.82763,
+      "volume_24h": 4972.347712,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-paris-on-august-21-2026-28c"
+    },
+    {
+      "event_id": "874074",
+      "event": "Highest temperature in Paris on August 21?",
+      "market_id": "3714993",
+      "question": "Will the highest temperature in Paris be 27\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 4419.3741,
+      "volume_24h": 4904.699825,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-paris-on-august-21-2026-27c"
+    },
+    {
+      "event_id": "874079",
+      "event": "Highest temperature in Munich on August 21?",
+      "market_id": "3715046",
+      "question": "Will the highest temperature in Munich be 19\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 26375.46842,
+      "volume_24h": 4616.150822,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-munich-on-august-21-2026-19c"
+    },
+    {
+      "event_id": "874083",
+      "event": "Highest temperature in Shanghai on August 21?",
+      "market_id": "3715095",
+      "question": "Will the highest temperature in Shanghai be 34\u00b0C or higher on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 5879.78802,
+      "volume_24h": 4186.964569000001,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-shanghai-on-august-21-2026-34corhigher"
+    },
+    {
+      "event_id": "874074",
+      "event": "Highest temperature in Paris on August 21?",
+      "market_id": "3714995",
+      "question": "Will the highest temperature in Paris be 29\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 6651.2784,
+      "volume_24h": 4080.0206069999995,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-paris-on-august-21-2026-29c"
+    },
+    {
+      "event_id": "874079",
+      "event": "Highest temperature in Munich on August 21?",
+      "market_id": "3715044",
+      "question": "Will the highest temperature in Munich be 17\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 26873.88264,
+      "volume_24h": 3513.866599,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-munich-on-august-21-2026-17c"
+    },
+    {
+      "event_id": "874090",
+      "event": "Highest temperature in Beijing on August 21?",
+      "market_id": "3715165",
+      "question": "Will the highest temperature in Beijing be 30\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 28308.37443,
+      "volume_24h": 3075.9941659999995,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-beijing-on-august-21-2026-30c"
+    },
+    {
+      "event_id": "874073",
+      "event": "Highest temperature in London on August 21?",
+      "market_id": "3714985",
+      "question": "Will the highest temperature in London be 27\u00b0C or higher on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 4399.73668,
+      "volume_24h": 2797.775,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-london-on-august-21-2026-27corhigher"
+    },
+    {
+      "event_id": "874083",
+      "event": "Highest temperature in Shanghai on August 21?",
+      "market_id": "3715090",
+      "question": "Will the highest temperature in Shanghai be 29\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 28687.42644,
+      "volume_24h": 2488.174404,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-shanghai-on-august-21-2026-29c"
+    },
+    {
+      "event_id": "874073",
+      "event": "Highest temperature in London on August 21?",
+      "market_id": "3714976",
+      "question": "Will the highest temperature in London be 18\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 32427.08904,
+      "volume_24h": 2379.9525000000003,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-london-on-august-21-2026-18c"
+    },
+    {
+      "event_id": "874073",
+      "event": "Highest temperature in London on August 21?",
+      "market_id": "3714984",
+      "question": "Will the highest temperature in London be 26\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 3370.73036,
+      "volume_24h": 2337.4433320000003,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-london-on-august-21-2026-26c"
+    },
+    {
+      "event_id": "874097",
+      "event": "Highest temperature in Amsterdam on August 21?",
+      "market_id": "3715239",
+      "question": "Will the highest temperature in Amsterdam be 15\u00b0C or below on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 29226.91993,
+      "volume_24h": 2104.173003,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-amsterdam-on-august-21-2026-15corbelow"
+    },
+    {
+      "event_id": "874097",
+      "event": "Highest temperature in Amsterdam on August 21?",
+      "market_id": "3715248",
+      "question": "Will the highest temperature in Amsterdam be 24\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 2227.8594,
+      "volume_24h": 1911.195,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-amsterdam-on-august-21-2026-24c"
+    },
+    {
+      "event_id": "874074",
+      "event": "Highest temperature in Paris on August 21?",
+      "market_id": "3714996",
+      "question": "Will the highest temperature in Paris be 30\u00b0C or higher on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 9027.34309,
+      "volume_24h": 1155.438,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-paris-on-august-21-2026-30corhigher"
+    },
+    {
+      "event_id": "874097",
+      "event": "Highest temperature in Amsterdam on August 21?",
+      "market_id": "3715249",
+      "question": "Will the highest temperature in Amsterdam be 25\u00b0C or higher on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 3620.80543,
+      "volume_24h": 1151.97,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-amsterdam-on-august-21-2026-25corhigher"
+    },
+    {
+      "event_id": "874083",
+      "event": "Highest temperature in Shanghai on August 21?",
+      "market_id": "3715089",
+      "question": "Will the highest temperature in Shanghai be 28\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 38697.83456,
+      "volume_24h": 1089.44,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-shanghai-on-august-21-2026-28c"
+    },
+    {
+      "event_id": "874083",
+      "event": "Highest temperature in Shanghai on August 21?",
+      "market_id": "3715088",
+      "question": "Will the highest temperature in Shanghai be 27\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 41423.16435,
+      "volume_24h": 1000.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-shanghai-on-august-21-2026-27c"
+    },
+    {
+      "event_id": "874093",
+      "event": "Highest temperature in Shenzhen on August 21?",
+      "market_id": "3715196",
+      "question": "Will the highest temperature in Shenzhen be 26\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 14690.40479,
+      "volume_24h": 388.57,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-shenzhen-on-august-21-2026-26c"
+    },
+    {
+      "event_id": "874090",
+      "event": "Highest temperature in Beijing on August 21?",
+      "market_id": "3715164",
+      "question": "Will the highest temperature in Beijing be 29\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 21049.07956,
+      "volume_24h": 147.09,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-beijing-on-august-21-2026-29c"
+    },
+    {
+      "event_id": "874082",
+      "event": "Highest temperature in Hong Kong on August 21?",
+      "market_id": "3715076",
+      "question": "Will the highest temperature in Hong Kong be 26\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 13565.99867,
+      "volume_24h": 55.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-hong-kong-on-august-21-2026-26c"
+    },
+    {
+      "event_id": "874082",
+      "event": "Highest temperature in Hong Kong on August 21?",
+      "market_id": "3715074",
+      "question": "Will the highest temperature in Hong Kong be 24\u00b0C or below on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 10276.75593,
+      "volume_24h": 53.712993,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-hong-kong-on-august-21-2026-24corbelow"
+    },
+    {
+      "event_id": "874083",
+      "event": "Highest temperature in Shanghai on August 21?",
+      "market_id": "3715086",
+      "question": "Will the highest temperature in Shanghai be 25\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 45579.84326,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-shanghai-on-august-21-2026-25c"
+    },
+    {
+      "event_id": "874083",
+      "event": "Highest temperature in Shanghai on August 21?",
+      "market_id": "3715087",
+      "question": "Will the highest temperature in Shanghai be 26\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 42746.75613,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-shanghai-on-august-21-2026-26c"
+    },
+    {
+      "event_id": "874083",
+      "event": "Highest temperature in Shanghai on August 21?",
+      "market_id": "3715085",
+      "question": "Will the highest temperature in Shanghai be 24\u00b0C or below on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 41705.61986,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-shanghai-on-august-21-2026-24corbelow"
+    },
+    {
+      "event_id": "874079",
+      "event": "Highest temperature in Munich on August 21?",
+      "market_id": "3715042",
+      "question": "Will the highest temperature in Munich be 15\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 30620.3133,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-munich-on-august-21-2026-15c"
+    },
+    {
+      "event_id": "874079",
+      "event": "Highest temperature in Munich on August 21?",
+      "market_id": "3715041",
+      "question": "Will the highest temperature in Munich be 14\u00b0C or below on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 30329.60944,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-munich-on-august-21-2026-14corbelow"
+    },
+    {
+      "event_id": "874079",
+      "event": "Highest temperature in Munich on August 21?",
+      "market_id": "3715043",
+      "question": "Will the highest temperature in Munich be 16\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 28763.06648,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-munich-on-august-21-2026-16c"
+    },
+    {
+      "event_id": "874090",
+      "event": "Highest temperature in Beijing on August 21?",
+      "market_id": "3715163",
+      "question": "Will the highest temperature in Beijing be 28\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 28374.32109,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-beijing-on-august-21-2026-28c"
+    },
+    {
+      "event_id": "874097",
+      "event": "Highest temperature in Amsterdam on August 21?",
+      "market_id": "3715240",
+      "question": "Will the highest temperature in Amsterdam be 16\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 26332.57935,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-amsterdam-on-august-21-2026-16c"
+    },
+    {
+      "event_id": "874090",
+      "event": "Highest temperature in Beijing on August 21?",
+      "market_id": "3715162",
+      "question": "Will the highest temperature in Beijing be 27\u00b0C or below on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 20659.0848,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-beijing-on-august-21-2026-27corbelow"
+    },
+    {
+      "event_id": "874093",
+      "event": "Highest temperature in Shenzhen on August 21?",
+      "market_id": "3715195",
+      "question": "Will the highest temperature in Shenzhen be 25\u00b0C or below on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 17400.75227,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-shenzhen-on-august-21-2026-25corbelow"
+    },
+    {
+      "event_id": "874082",
+      "event": "Highest temperature in Hong Kong on August 21?",
+      "market_id": "3715075",
+      "question": "Will the highest temperature in Hong Kong be 25\u00b0C on August 21?",
+      "end_date": "2026-08-21T12:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0005,
+        0.9995
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.001,
+      "spread": 0.001,
+      "liquidity": 15229.29282,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "highest-temperature-in-hong-kong-on-august-21-2026-25c"
+    },
+    {
+      "event_id": "876257",
+      "event": "Will the US break its record for billion-dollar weather and climate disasters in 2026?",
+      "market_id": "3724470",
+      "question": "Will the US break its record for billion-dollar weather and climate disasters in 2026?",
+      "end_date": "2027-07-01T03:59:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.13,
+        0.87
+      ],
+      "best_bid": 0.1,
+      "best_ask": 0.16,
+      "spread": 0.06,
+      "liquidity": 89.4382,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-the-us-break-its-record-for-billion-dollar-weather-and-climate-disasters-in-2026-1787153419673"
+    }
+  ]
+}

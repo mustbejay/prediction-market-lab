@@ -1,0 +1,42 @@
+{
+  "id": 368889,
+  "conditionId": "0xef928bbbc34c6d12147e74702e9252c2c7d3b68f1bb258ee72efb09e63409f6a",
+  "title": "BTC Up or Down - 5 Min",
+  "slug": "btc-up-or-down-5-min-1787331000",
+  "status": "FUNDED",
+  "marketType": "single",
+  "tradeType": "clob",
+  "expirationTimestamp": 1787331300,
+  "collateralToken": {
+    "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "decimals": 6,
+    "symbol": "USDC"
+  },
+  "tokens": {
+    "yes": "yes-token",
+    "no": "no-token"
+  },
+  "prices": [0.195, 0.805],
+  "tradePrices": {
+    "buy": {"market": [0.26, 0.87], "limit": [0.13, 0.74]},
+    "sell": {"market": [0.13, 0.74], "limit": [0.26, 0.87]}
+  },
+  "volume": "11320000",
+  "volumeFormatted": "11.320000",
+  "venue": {
+    "exchange": "0x05c748E2f4DcDe0ec9Fa8DDc40DE6b867f923fa5",
+    "adapter": null
+  },
+  "categories": ["Minutely", "5 min"],
+  "properties": [
+    {"propertyKeySlug": "domain", "value": ["crypto"]},
+    {"propertyKeySlug": "duration", "value": ["5-min"]},
+    {"propertyKeySlug": "ticker", "value": ["btc"]}
+  ],
+  "metadata": {
+    "fee": true,
+    "takerDelayMs": 250,
+    "makerRebateMult": 0.3,
+    "oracleVersion": 2
+  }
+}

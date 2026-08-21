@@ -1,0 +1,1458 @@
+{
+  "source": "https://gamma-api.polymarket.com/public-search",
+  "query": "Bitcoin",
+  "collected_at": "2026-08-21T15:46:14.575408+00:00",
+  "market_count": 58,
+  "markets": [
+    {
+      "event_id": "780132",
+      "event": "What price will Bitcoin hit in August?",
+      "market_id": "3257338",
+      "question": "Will Bitcoin reach $80,000 in August?",
+      "end_date": "2026-09-01T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.6485,
+        0.3515
+      ],
+      "best_bid": 0.648,
+      "best_ask": 0.649,
+      "spread": 0.001,
+      "liquidity": 43232.42599,
+      "volume_24h": 409993.68409399997,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-reach-80k-in-august-2026"
+    },
+    {
+      "event_id": "780132",
+      "event": "What price will Bitcoin hit in August?",
+      "market_id": "3257332",
+      "question": "Will Bitcoin reach $100,000 in August?",
+      "end_date": "2026-09-01T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.016,
+        0.984
+      ],
+      "best_bid": 0.015,
+      "best_ask": 0.017,
+      "spread": 0.002,
+      "liquidity": 54875.04197,
+      "volume_24h": 403946.30122500006,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-reach-100k-in-august-2026"
+    },
+    {
+      "event_id": "862400",
+      "event": "Bitcoin above ___ on August 21?",
+      "market_id": "3651165",
+      "question": "Will the price of Bitcoin be above $70,000 on August 21?",
+      "end_date": "2026-08-21T16:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.9995,
+        0.0005
+      ],
+      "best_bid": 0.999,
+      "best_ask": 1.0,
+      "spread": 0.001,
+      "liquidity": 18298.38334,
+      "volume_24h": 336134.050629,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "bitcoin-above-70k-on-august-21-2026"
+    },
+    {
+      "event_id": "862400",
+      "event": "Bitcoin above ___ on August 21?",
+      "market_id": "3651166",
+      "question": "Will the price of Bitcoin be above $72,000 on August 21?",
+      "end_date": "2026-08-21T16:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.9995,
+        0.0005
+      ],
+      "best_bid": 0.999,
+      "best_ask": 1.0,
+      "spread": 0.001,
+      "liquidity": 30262.88403,
+      "volume_24h": 335503.61776899995,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "bitcoin-above-72k-on-august-21-2026"
+    },
+    {
+      "event_id": "780132",
+      "event": "What price will Bitcoin hit in August?",
+      "market_id": "3257336",
+      "question": "Will Bitcoin reach $82,500 in August?",
+      "end_date": "2026-09-01T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.4015,
+        0.5985
+      ],
+      "best_bid": 0.394,
+      "best_ask": 0.409,
+      "spread": 0.015,
+      "liquidity": 45240.72421,
+      "volume_24h": 276404.773866,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-reach-82pt5k-in-august-2026"
+    },
+    {
+      "event_id": "780132",
+      "event": "What price will Bitcoin hit in August?",
+      "market_id": "3257334",
+      "question": "Will Bitcoin reach $85,000 in August?",
+      "end_date": "2026-09-01T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.224,
+        0.776
+      ],
+      "best_bid": 0.223,
+      "best_ask": 0.225,
+      "spread": 0.002,
+      "liquidity": 52636.8552,
+      "volume_24h": 226166.93088400003,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-reach-85k-in-august-2026"
+    },
+    {
+      "event_id": "862400",
+      "event": "Bitcoin above ___ on August 21?",
+      "market_id": "3651164",
+      "question": "Will the price of Bitcoin be above $68,000 on August 21?",
+      "end_date": "2026-08-21T16:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.9995,
+        0.0005
+      ],
+      "best_bid": 0.999,
+      "best_ask": 1.0,
+      "spread": 0.001,
+      "liquidity": 26378.66365,
+      "volume_24h": 212354.99921200005,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "bitcoin-above-68k-on-august-21-2026"
+    },
+    {
+      "event_id": "862400",
+      "event": "Bitcoin above ___ on August 21?",
+      "market_id": "3651163",
+      "question": "Will the price of Bitcoin be above $66,000 on August 21?",
+      "end_date": "2026-08-21T16:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.9995,
+        0.0005
+      ],
+      "best_bid": 0.999,
+      "best_ask": 1.0,
+      "spread": 0.001,
+      "liquidity": 13837.24615,
+      "volume_24h": 174028.77922800003,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "bitcoin-above-66k-on-august-21-2026"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "701502",
+      "question": "Will Bitcoin dip to $45,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.1,
+        0.9
+      ],
+      "best_bid": 0.09,
+      "best_ask": 0.11,
+      "spread": 0.02,
+      "liquidity": 142621.8155,
+      "volume_24h": 160572.091984,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-dip-to-45000-by-december-31-2026-674-923-755-971-998-525-926-245-316-517-544-589-965-923-986-841-815-224-586-231-289-533-573"
+    },
+    {
+      "event_id": "780132",
+      "event": "What price will Bitcoin hit in August?",
+      "market_id": "3257355",
+      "question": "Will Bitcoin dip to $60,000 in August?",
+      "end_date": "2026-09-01T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0165,
+        0.9835
+      ],
+      "best_bid": 0.016,
+      "best_ask": 0.017,
+      "spread": 0.001,
+      "liquidity": 53585.35619,
+      "volume_24h": 146006.62776000003,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-dip-to-60k-in-august-2026"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "701501",
+      "question": "Will Bitcoin dip to $55,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.265,
+        0.735
+      ],
+      "best_bid": 0.26,
+      "best_ask": 0.27,
+      "spread": 0.01,
+      "liquidity": 77857.3292,
+      "volume_24h": 135309.681558,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-dip-to-55000-by-december-31-2026-527-627-868-745-188-361-314-673-612-946-821-624-855-557-684-381-884-939-182-939-516"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "701496",
+      "question": "Will Bitcoin reach $100,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.285,
+        0.715
+      ],
+      "best_bid": 0.28,
+      "best_ask": 0.29,
+      "spread": 0.01,
+      "liquidity": 73689.895,
+      "volume_24h": 128878.37637,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-reach-100000-by-december-31-2026-571-361-361"
+    },
+    {
+      "event_id": "780132",
+      "event": "What price will Bitcoin hit in August?",
+      "market_id": "3724225",
+      "question": "Will Bitcoin dip to $67,500 in August?",
+      "end_date": "2026-09-01T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.075,
+        0.925
+      ],
+      "best_bid": 0.07,
+      "best_ask": 0.08,
+      "spread": 0.01,
+      "liquidity": 45776.0699,
+      "volume_24h": 126461.77730100001,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-dip-to-67pt5k-in-august-2026"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "2467208",
+      "question": "Will Bitcoin reach $80,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.88,
+        0.12
+      ],
+      "best_bid": 0.87,
+      "best_ask": 0.89,
+      "spread": 0.02,
+      "liquidity": 87510.0316,
+      "volume_24h": 109245.08408400002,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-reach-80000-by-december-31-2026-from-june-8"
+    },
+    {
+      "event_id": "862400",
+      "event": "Bitcoin above ___ on August 21?",
+      "market_id": "3651162",
+      "question": "Will the price of Bitcoin be above $64,000 on August 21?",
+      "end_date": "2026-08-21T16:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.9995,
+        0.0005
+      ],
+      "best_bid": 0.999,
+      "best_ask": 1.0,
+      "spread": 0.001,
+      "liquidity": 12401.89444,
+      "volume_24h": 105845.767171,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "bitcoin-above-64k-on-august-21-2026"
+    },
+    {
+      "event_id": "780132",
+      "event": "What price will Bitcoin hit in August?",
+      "market_id": "3257356",
+      "question": "Will Bitcoin dip to $57,500 in August?",
+      "end_date": "2026-09-01T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0115,
+        0.9885
+      ],
+      "best_bid": 0.011,
+      "best_ask": 0.012,
+      "spread": 0.001,
+      "liquidity": 88032.03176,
+      "volume_24h": 98240.06686500002,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-dip-to-57pt5k-in-august-2026"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "1339768",
+      "question": "Will Bitcoin dip to $40,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.065,
+        0.935
+      ],
+      "best_bid": 0.06,
+      "best_ask": 0.07,
+      "spread": 0.01,
+      "liquidity": 94946.2909,
+      "volume_24h": 92853.590856,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-dip-to-40000-by-december-31-2026-593-522-842-874-931-776-991-167-531-959"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "701495",
+      "question": "Will Bitcoin reach $110,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.175,
+        0.825
+      ],
+      "best_bid": 0.17,
+      "best_ask": 0.18,
+      "spread": 0.01,
+      "liquidity": 54713.7204,
+      "volume_24h": 85422.415766,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-reach-110000-by-december-31-2026-658-339-969"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "2467207",
+      "question": "Will Bitcoin reach $85,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.645,
+        0.355
+      ],
+      "best_bid": 0.64,
+      "best_ask": 0.65,
+      "spread": 0.01,
+      "liquidity": 59093.299,
+      "volume_24h": 81297.018644,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-reach-85000-by-december-31-2026-from-june-8"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "1339767",
+      "question": "Will Bitcoin dip to $50,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.185,
+        0.815
+      ],
+      "best_bid": 0.18,
+      "best_ask": 0.19,
+      "spread": 0.01,
+      "liquidity": 80219.3219,
+      "volume_24h": 68581.891453,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-dip-to-50000-by-december-31-2026-454-325-222-878-949-487-451-853-523-111"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "3013350",
+      "question": "Will Bitcoin dip to $60,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.345,
+        0.655
+      ],
+      "best_bid": 0.34,
+      "best_ask": 0.35,
+      "spread": 0.01,
+      "liquidity": 170174.9807,
+      "volume_24h": 67785.67038899999,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-dip-to-60k-by-december-31-2026-from-july-21"
+    },
+    {
+      "event_id": "780132",
+      "event": "What price will Bitcoin hit in August?",
+      "market_id": "3724226",
+      "question": "Will Bitcoin dip to $65,000 in August?",
+      "end_date": "2026-09-01T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.045,
+        0.955
+      ],
+      "best_bid": 0.04,
+      "best_ask": 0.05,
+      "spread": 0.01,
+      "liquidity": 38571.5827,
+      "volume_24h": 66143.368898,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-dip-to-65k-in-august-2026-from-august-19"
+    },
+    {
+      "event_id": "780132",
+      "event": "What price will Bitcoin hit in August?",
+      "market_id": "3746574",
+      "question": "Will Bitcoin dip to $70,000 in August?",
+      "end_date": "2026-09-01T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.165,
+        0.835
+      ],
+      "best_bid": 0.16,
+      "best_ask": 0.17,
+      "spread": 0.01,
+      "liquidity": 38435.1598,
+      "volume_24h": 64508.455357,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-dip-to-70k-in-august-2026"
+    },
+    {
+      "event_id": "780132",
+      "event": "What price will Bitcoin hit in August?",
+      "market_id": "3307942",
+      "question": "Will Bitcoin dip to $62,500 in August?",
+      "end_date": "2026-09-01T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0245,
+        0.9755
+      ],
+      "best_bid": 0.024,
+      "best_ask": 0.025,
+      "spread": 0.001,
+      "liquidity": 46376.97314,
+      "volume_24h": 63891.280602,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-dip-to-62pt5k-in-august-2026-from-august-3"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "1345531",
+      "question": "Will Bitcoin reach $90,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.485,
+        0.515
+      ],
+      "best_bid": 0.48,
+      "best_ask": 0.49,
+      "spread": 0.01,
+      "liquidity": 77157.5266,
+      "volume_24h": 59876.144072,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-reach-90000-by-december-31-2026-113-862-581-343"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "701494",
+      "question": "Will Bitcoin reach $120,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.12,
+        0.88
+      ],
+      "best_bid": 0.11,
+      "best_ask": 0.13,
+      "spread": 0.02,
+      "liquidity": 60246.1572,
+      "volume_24h": 58365.411407,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-reach-120000-by-december-31-2026-625-425-562"
+    },
+    {
+      "event_id": "780132",
+      "event": "What price will Bitcoin hit in August?",
+      "market_id": "3257362",
+      "question": "Will Bitcoin dip to $50,000 in August?",
+      "end_date": "2026-09-01T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0025,
+        0.9975
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.004,
+      "spread": 0.003,
+      "liquidity": 75544.14375,
+      "volume_24h": 48190.185375,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-dip-to-50k-in-august-2026"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "1339769",
+      "question": "Will Bitcoin dip to $30,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0415,
+        0.9585
+      ],
+      "best_bid": 0.038,
+      "best_ask": 0.045,
+      "spread": 0.007,
+      "liquidity": 68722.83628,
+      "volume_24h": 39914.616369,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-dip-to-30000-by-december-31-2026-971-191-116-343-999-758-299-813-237"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "701493",
+      "question": "Will Bitcoin reach $130,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0835,
+        0.9165
+      ],
+      "best_bid": 0.078,
+      "best_ask": 0.089,
+      "spread": 0.011,
+      "liquidity": 55015.27582,
+      "volume_24h": 37981.466162000004,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-reach-130000-by-december-31-2026-756-151-855"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "1343219",
+      "question": "Will Bitcoin dip to $20,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.011,
+        0.989
+      ],
+      "best_bid": 0.008,
+      "best_ask": 0.014,
+      "spread": 0.006,
+      "liquidity": 96183.71228,
+      "volume_24h": 35079.067856,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-dip-to-20000-by-december-31-2026-121-885-178-397-354-236-731-159-857"
+    },
+    {
+      "event_id": "780132",
+      "event": "What price will Bitcoin hit in August?",
+      "market_id": "3257358",
+      "question": "Will Bitcoin dip to $55,000 in August?",
+      "end_date": "2026-09-01T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.008,
+        0.992
+      ],
+      "best_bid": 0.007,
+      "best_ask": 0.009,
+      "spread": 0.002,
+      "liquidity": 79132.02555,
+      "volume_24h": 34087.583644,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-dip-to-55k-in-august-2026"
+    },
+    {
+      "event_id": "862400",
+      "event": "Bitcoin above ___ on August 21?",
+      "market_id": "3651156",
+      "question": "Will the price of Bitcoin be above $52,000 on August 21?",
+      "end_date": "2026-08-21T16:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.9995,
+        0.0005
+      ],
+      "best_bid": 0.999,
+      "best_ask": 1.0,
+      "spread": 0.001,
+      "liquidity": 37076.748,
+      "volume_24h": 30000.0,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "bitcoin-above-52k-on-august-21-2026"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "701504",
+      "question": "Will Bitcoin dip to $25,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0295,
+        0.9705
+      ],
+      "best_bid": 0.029,
+      "best_ask": 0.03,
+      "spread": 0.001,
+      "liquidity": 122492.4347,
+      "volume_24h": 25012.52,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-dip-to-25000-by-december-31-2026-948-243-253-666-115-787-981-282-573-719-186-417-762-754-486-851-278-145-417-178-244"
+    },
+    {
+      "event_id": "780132",
+      "event": "What price will Bitcoin hit in August?",
+      "market_id": "3257360",
+      "question": "Will Bitcoin dip to $52,500 in August?",
+      "end_date": "2026-09-01T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.005,
+        0.995
+      ],
+      "best_bid": 0.004,
+      "best_ask": 0.006,
+      "spread": 0.002,
+      "liquidity": 88732.72364,
+      "volume_24h": 24413.438888,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-dip-to-52pt5k-in-august-2026"
+    },
+    {
+      "event_id": "780132",
+      "event": "What price will Bitcoin hit in August?",
+      "market_id": "3257370",
+      "question": "Will Bitcoin dip to $40,000 in August?",
+      "end_date": "2026-09-01T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0015,
+        0.9985
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.002,
+      "spread": 0.001,
+      "liquidity": 66598.73321,
+      "volume_24h": 22478.182688000004,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-dip-to-40k-in-august-2026"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "701503",
+      "question": "Will Bitcoin dip to $35,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.055,
+        0.945
+      ],
+      "best_bid": 0.05,
+      "best_ask": 0.06,
+      "spread": 0.01,
+      "liquidity": 105166.7434,
+      "volume_24h": 22286.820667,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-dip-to-35000-by-december-31-2026-744-877-748-219-467-465-646-211-122-947-537-552-555-361-972-954-635-887-657-996-643"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "701492",
+      "question": "Will Bitcoin reach $140,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.064,
+        0.936
+      ],
+      "best_bid": 0.048,
+      "best_ask": 0.08,
+      "spread": 0.032,
+      "liquidity": 53522.62676,
+      "volume_24h": 21939.604295,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-reach-140000-by-december-31-2026-131-829-299"
+    },
+    {
+      "event_id": "862400",
+      "event": "Bitcoin above ___ on August 21?",
+      "market_id": "3651161",
+      "question": "Will the price of Bitcoin be above $62,000 on August 21?",
+      "end_date": "2026-08-21T16:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.999,
+        0.001
+      ],
+      "best_bid": 0.998,
+      "best_ask": 1.0,
+      "spread": 0.002,
+      "liquidity": 3909.10348,
+      "volume_24h": 21790.87,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "bitcoin-above-62k-on-august-21-2026"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "701486",
+      "question": "Will Bitcoin reach $200,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0205,
+        0.9795
+      ],
+      "best_bid": 0.02,
+      "best_ask": 0.021,
+      "spread": 0.001,
+      "liquidity": 95211.35041,
+      "volume_24h": 18875.196,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-reach-200000-by-december-31-2026-752-232-389"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "2467206",
+      "question": "Will Bitcoin reach $95,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.345,
+        0.655
+      ],
+      "best_bid": 0.34,
+      "best_ask": 0.35,
+      "spread": 0.01,
+      "liquidity": 49596.7,
+      "volume_24h": 14317.021159000002,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-reach-95000-by-december-31-2026-from-june-8"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "701491",
+      "question": "Will Bitcoin reach $150,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0435,
+        0.9565
+      ],
+      "best_bid": 0.043,
+      "best_ask": 0.044,
+      "spread": 0.001,
+      "liquidity": 52521.11134,
+      "volume_24h": 12878.080688,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-reach-150000-by-december-31-2026-557-246-971"
+    },
+    {
+      "event_id": "862400",
+      "event": "Bitcoin above ___ on August 21?",
+      "market_id": "3651159",
+      "question": "Will the price of Bitcoin be above $58,000 on August 21?",
+      "end_date": "2026-08-21T16:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.9995,
+        0.0005
+      ],
+      "best_bid": 0.999,
+      "best_ask": 1.0,
+      "spread": 0.001,
+      "liquidity": 53709.47389,
+      "volume_24h": 12110.0,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "bitcoin-above-58k-on-august-21-2026"
+    },
+    {
+      "event_id": "862400",
+      "event": "Bitcoin above ___ on August 21?",
+      "market_id": "3651158",
+      "question": "Will the price of Bitcoin be above $56,000 on August 21?",
+      "end_date": "2026-08-21T16:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.9995,
+        0.0005
+      ],
+      "best_bid": 0.999,
+      "best_ask": 1.0,
+      "spread": 0.001,
+      "liquidity": 43721.58182,
+      "volume_24h": 9000.0,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "bitcoin-above-56k-on-august-21-2026"
+    },
+    {
+      "event_id": "780132",
+      "event": "What price will Bitcoin hit in August?",
+      "market_id": "3257366",
+      "question": "Will Bitcoin dip to $45,000 in August?",
+      "end_date": "2026-09-01T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0015,
+        0.9985
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.002,
+      "spread": 0.001,
+      "liquidity": 105569.36904,
+      "volume_24h": 8656.958,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-dip-to-45k-in-august-2026"
+    },
+    {
+      "event_id": "780132",
+      "event": "What price will Bitcoin hit in August?",
+      "market_id": "3257364",
+      "question": "Will Bitcoin dip to $47,500 in August?",
+      "end_date": "2026-09-01T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.003,
+        0.997
+      ],
+      "best_bid": 0.002,
+      "best_ask": 0.004,
+      "spread": 0.002,
+      "liquidity": 64302.62798,
+      "volume_24h": 6760.177505,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-dip-to-47pt5k-in-august-2026"
+    },
+    {
+      "event_id": "780132",
+      "event": "What price will Bitcoin hit in August?",
+      "market_id": "3257368",
+      "question": "Will Bitcoin dip to $42,500 in August?",
+      "end_date": "2026-09-01T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0015,
+        0.9985
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.002,
+      "spread": 0.001,
+      "liquidity": 114525.77582,
+      "volume_24h": 5330.910273,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-dip-to-42pt5k-in-august-2026"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "1057883",
+      "question": "Will Bitcoin reach $250,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0155,
+        0.9845
+      ],
+      "best_bid": 0.015,
+      "best_ask": 0.016,
+      "spread": 0.001,
+      "liquidity": 106159.26232,
+      "volume_24h": 5098.267125,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-reach-250000-by-december-31-2026-579-442"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "701489",
+      "question": "Will Bitcoin reach $170,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0235,
+        0.9765
+      ],
+      "best_bid": 0.023,
+      "best_ask": 0.024,
+      "spread": 0.001,
+      "liquidity": 67538.07143,
+      "volume_24h": 4453.13,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-reach-170000-by-december-31-2026-335-688-943"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "1343220",
+      "question": "Will Bitcoin dip to $10,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.015,
+        0.985
+      ],
+      "best_bid": 0.013,
+      "best_ask": 0.017,
+      "spread": 0.004,
+      "liquidity": 72446.40175,
+      "volume_24h": 3469.230768,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-dip-to-10000-by-december-31-2026-888-644-567-258-946-853-325-494-356-991"
+    },
+    {
+      "event_id": "862400",
+      "event": "Bitcoin above ___ on August 21?",
+      "market_id": "3651157",
+      "question": "Will the price of Bitcoin be above $54,000 on August 21?",
+      "end_date": "2026-08-21T16:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.9995,
+        0.0005
+      ],
+      "best_bid": 0.999,
+      "best_ask": 1.0,
+      "spread": 0.001,
+      "liquidity": 55344.8757,
+      "volume_24h": 3000.0,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "bitcoin-above-54k-on-august-21-2026"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "1057916",
+      "question": "Will Bitcoin dip to $15,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0155,
+        0.9845
+      ],
+      "best_bid": 0.015,
+      "best_ask": 0.016,
+      "spread": 0.001,
+      "liquidity": 56119.6357,
+      "volume_24h": 2042.30391,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-dip-to-15000-by-december-31-2026-416-954-417-853-885-363-335-458-585-275-615-269-479-379-516-218-918-374-598-429-212"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "1343228",
+      "question": "Will Bitcoin dip to $5,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.012,
+        0.988
+      ],
+      "best_bid": 0.01,
+      "best_ask": 0.014,
+      "spread": 0.004,
+      "liquidity": 93230.17596,
+      "volume_24h": 2029.621792,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-dip-to-5000-by-december-31-2026-jy3n-991-141-345-117-196-482-674-487-176-555"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "1393070",
+      "question": "Will Bitcoin reach $1,000,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.008,
+        0.992
+      ],
+      "best_bid": 0.007,
+      "best_ask": 0.009,
+      "spread": 0.002,
+      "liquidity": 119750.58375,
+      "volume_24h": 1555.326666,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-reach-1000000-by-december-31-2026-946"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "701487",
+      "question": "Will Bitcoin reach $190,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0205,
+        0.9795
+      ],
+      "best_bid": 0.02,
+      "best_ask": 0.021,
+      "spread": 0.001,
+      "liquidity": 79062.20785,
+      "volume_24h": 768.53,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-reach-190000-by-december-31-2026-936-485-627"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "701488",
+      "question": "Will Bitcoin reach $180,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0205,
+        0.9795
+      ],
+      "best_bid": 0.02,
+      "best_ask": 0.021,
+      "spread": 0.001,
+      "liquidity": 66139.22864,
+      "volume_24h": 693.190476,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-reach-180000-by-december-31-2026-629-622-598"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "1393068",
+      "question": "Will Bitcoin reach $500,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0125,
+        0.9875
+      ],
+      "best_bid": 0.012,
+      "best_ask": 0.013,
+      "spread": 0.001,
+      "liquidity": 123748.20776,
+      "volume_24h": 334.492456,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-reach-500000-by-december-31-2026-864"
+    },
+    {
+      "event_id": "89502",
+      "event": "What price will Bitcoin hit in 2026?",
+      "market_id": "701490",
+      "question": "Will Bitcoin reach $160,000 by December 31, 2026?",
+      "end_date": "2027-01-01T05:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0355,
+        0.9645
+      ],
+      "best_bid": 0.028,
+      "best_ask": 0.043,
+      "spread": 0.015,
+      "liquidity": 60565.43567,
+      "volume_24h": 278.466693,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-bitcoin-reach-160000-by-december-31-2026-934-934-164"
+    },
+    {
+      "event_id": "862400",
+      "event": "Bitcoin above ___ on August 21?",
+      "market_id": "3651160",
+      "question": "Will the price of Bitcoin be above $60,000 on August 21?",
+      "end_date": "2026-08-21T16:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.9995,
+        0.0005
+      ],
+      "best_bid": 0.999,
+      "best_ask": 1.0,
+      "spread": 0.001,
+      "liquidity": 38638.91748,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "bitcoin-above-60k-on-august-21-2026"
+    }
+  ]
+}

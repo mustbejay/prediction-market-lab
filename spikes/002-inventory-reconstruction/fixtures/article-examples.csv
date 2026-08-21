@@ -1,0 +1,5 @@
+market_id,timestamp,outcome,price,size
+mo-money-example,2026-08-01T00:00:01Z,Up,0.40,250
+mo-money-example,2026-08-01T00:02:00Z,Down,0.41,145
+balanced-example,2026-08-01T01:00:01Z,Up,0.44,50
+balanced-example,2026-08-01T01:00:30Z,Down,0.53,50

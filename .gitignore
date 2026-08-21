@@ -1,0 +1,16 @@
+.secrets/
+vendor/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+__pycache__/
+.pytest_cache/
+.venv/
+node_modules/
+dist/
+build/
+*.db
+*.sqlite
+*.sqlite3

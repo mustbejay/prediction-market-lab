@@ -1,0 +1,3158 @@
+{
+  "source": "https://gamma-api.polymarket.com/public-search",
+  "query": "rain",
+  "collected_at": "2026-08-21T15:46:24.894746+00:00",
+  "market_count": 126,
+  "markets": [
+    {
+      "event_id": "859496",
+      "event": "What will Trump say this week? (August 17 - August 23)",
+      "market_id": "3634284",
+      "question": "Will Trump say \"Transgender\" this week?",
+      "end_date": "2026-08-23T23:59:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.86,
+        0.14
+      ],
+      "best_bid": 0.76,
+      "best_ask": 0.96,
+      "spread": 0.2,
+      "liquidity": 969.6236,
+      "volume_24h": 3035.0766200000003,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-trump-say-transgender-this-week-20260823"
+    },
+    {
+      "event_id": "859496",
+      "event": "What will Trump say this week? (August 17 - August 23)",
+      "market_id": "3634281",
+      "question": "Will Trump say \"Barack Hussein Obama\" this week?",
+      "end_date": "2026-08-23T23:59:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.61,
+        0.39
+      ],
+      "best_bid": 0.33,
+      "best_ask": 0.89,
+      "spread": 0.56,
+      "liquidity": 207.542,
+      "volume_24h": 522.429375,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-trump-say-barack-hussein-obama-this-week-20260823"
+    },
+    {
+      "event_id": "833603",
+      "event": "Will it rain during the Dutch Grand Prix?",
+      "market_id": "3516310",
+      "question": "Will it rain during the Dutch Grand Prix?",
+      "end_date": "2026-09-01T03:59:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.29,
+        0.71
+      ],
+      "best_bid": 0.27,
+      "best_ask": 0.31,
+      "spread": 0.04,
+      "liquidity": 1118.1273,
+      "volume_24h": 485.25006,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-it-rain-during-the-dutch-grand-prix-20260803152238319"
+    },
+    {
+      "event_id": "859496",
+      "event": "What will Trump say this week? (August 17 - August 23)",
+      "market_id": "3634265",
+      "question": "Will Trump say \"America First\" this week?",
+      "end_date": "2026-08-23T23:59:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.635,
+        0.365
+      ],
+      "best_bid": 0.3,
+      "best_ask": 0.97,
+      "spread": 0.67,
+      "liquidity": 185.423,
+      "volume_24h": 205.60000000000002,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-trump-say-america-first-this-week-20260823"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500130",
+      "question": "Will 910 be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.247,
+        0.753
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.494,
+      "spread": 0.494,
+      "liquidity": 93.53368,
+      "volume_24h": 119.71,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-910-be-the-ewc-cs2-2026-mvp-20260810202106124"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500128",
+      "question": "Will bLitz be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.244,
+        0.756
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.488,
+      "spread": 0.488,
+      "liquidity": 95.10492,
+      "volume_24h": 111.71000000000001,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-blitz-be-the-ewc-cs2-2026-mvp-20260810202106122"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500113",
+      "question": "Will b1t be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.245,
+        0.755
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.49,
+      "spread": 0.49,
+      "liquidity": 37.0,
+      "volume_24h": 25.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-b1t-be-the-ewc-cs2-2026-mvp-20260810202106107"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500116",
+      "question": "Will w0nderful be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.245,
+        0.755
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.49,
+      "spread": 0.49,
+      "liquidity": 36.22,
+      "volume_24h": 25.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-w0nderful-be-the-ewc-cs2-2026-mvp-20260810202106110"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500133",
+      "question": "Will huNter- be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2505,
+        0.7495
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.5,
+      "spread": 0.499,
+      "liquidity": 42.087,
+      "volume_24h": 10.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-hunter-be-the-ewc-cs2-2026-mvp-20260810202106127"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500121",
+      "question": "Will xelex be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2505,
+        0.7495
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.5,
+      "spread": 0.499,
+      "liquidity": 21.99,
+      "volume_24h": 10.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-xelex-be-the-ewc-cs2-2026-mvp-20260810202106115"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500136",
+      "question": "Will NertZ be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2505,
+        0.7495
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.5,
+      "spread": 0.499,
+      "liquidity": 20.092,
+      "volume_24h": 10.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-nertz-be-the-ewc-cs2-2026-mvp-20260810202106130"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500120",
+      "question": "Will Spinx be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2505,
+        0.7495
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.5,
+      "spread": 0.499,
+      "liquidity": 18.4,
+      "volume_24h": 10.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-spinx-be-the-ewc-cs2-2026-mvp-20260810202106114"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500118",
+      "question": "Will torzsi be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.25,
+        0.75
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.5,
+      "spread": 0.5,
+      "liquidity": 19.7,
+      "volume_24h": 5.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-torzsi-be-the-ewc-cs2-2026-mvp-20260810202106112"
+    },
+    {
+      "event_id": "884980",
+      "event": "Where will it rain on August 21?",
+      "market_id": "3760155",
+      "question": "Will it rain in Los Angeles, CA on August 21?",
+      "end_date": "2026-08-22T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.49,
+        0.51
+      ],
+      "best_bid": 0.06,
+      "best_ask": 0.92,
+      "spread": 0.86,
+      "liquidity": 9.1902,
+      "volume_24h": 4.19915,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "where-will-it-rain-on-august-21-2026-los-angeles-ca"
+    },
+    {
+      "event_id": "637646",
+      "event": "Nick Fuentes and Sophie Rain confirmed relationship by September 30?",
+      "market_id": "2696722",
+      "question": "Nick Fuentes and Sophie Rain confirmed relationship by September 30?",
+      "end_date": "2026-09-30T00:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.016,
+        0.984
+      ],
+      "best_bid": 0.008,
+      "best_ask": 0.024,
+      "spread": 0.016,
+      "liquidity": 7870.70538,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "nick-fuentes-and-sophie-rain-confirmed-relationship-by-september-30-20260626180930298"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500166",
+      "question": "Will max be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.1195,
+        0.8805
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.239,
+      "spread": 0.239,
+      "liquidity": 309.233,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-max-be-the-ewc-cs2-2026-mvp-20260810202106159"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500153",
+      "question": "Will ryu be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.14,
+        0.86
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.28,
+      "spread": 0.28,
+      "liquidity": 291.543,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-ryu-be-the-ewc-cs2-2026-mvp-20260810202106146"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500172",
+      "question": "Will MaSvAl be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.038,
+        0.962
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.076,
+      "spread": 0.076,
+      "liquidity": 277.382,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-masval-be-the-ewc-cs2-2026-mvp-20260810202106165"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500167",
+      "question": "Will HUASOPEEK be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.176,
+        0.824
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.352,
+      "spread": 0.352,
+      "liquidity": 259.397,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-huasopeek-be-the-ewc-cs2-2026-mvp-20260810202106160"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500173",
+      "question": "Will AW be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.213,
+        0.787
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.426,
+      "spread": 0.426,
+      "liquidity": 223.402,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-aw-be-the-ewc-cs2-2026-mvp-20260810202106166"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500152",
+      "question": "Will phzy be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2485,
+        0.7515
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.497,
+      "spread": 0.497,
+      "liquidity": 203.907,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-phzy-be-the-ewc-cs2-2026-mvp-20260810202106145"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500177",
+      "question": "Will insani be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.1845,
+        0.8155
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.369,
+      "spread": 0.369,
+      "liquidity": 187.137,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-insani-be-the-ewc-cs2-2026-mvp-20260810202106170"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500124",
+      "question": "Will Wicadia be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0385,
+        0.9615
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.077,
+      "spread": 0.077,
+      "liquidity": 176.068,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-wicadia-be-the-ewc-cs2-2026-mvp-20260810202106118"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500171",
+      "question": "Will d1Ledez be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.09,
+        0.91
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.18,
+      "spread": 0.18,
+      "liquidity": 151.5756,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-d1ledez-be-the-ewc-cs2-2026-mvp-20260810202106164"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500181",
+      "question": "Will Graviti be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.331,
+        0.669
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.662,
+      "spread": 0.662,
+      "liquidity": 126.978,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-graviti-be-the-ewc-cs2-2026-mvp-20260810202106174"
+    },
+    {
+      "event_id": "859496",
+      "event": "What will Trump say this week? (August 17 - August 23)",
+      "market_id": "3634276",
+      "question": "Will Trump say \"Pearl Harbor\" this week?",
+      "end_date": "2026-08-23T23:59:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.545,
+        0.455
+      ],
+      "best_bid": 0.2,
+      "best_ask": 0.89,
+      "spread": 0.69,
+      "liquidity": 126.3228,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-trump-say-pearl-harbor-this-week-20260823"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500178",
+      "question": "Will stavn be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.34,
+        0.66
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.68,
+      "spread": 0.68,
+      "liquidity": 121.456,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-stavn-be-the-ewc-cs2-2026-mvp-20260810202106171"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500157",
+      "question": "Will slaxejezzz be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.247,
+        0.753
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.494,
+      "spread": 0.494,
+      "liquidity": 114.07304,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-slaxejezzz-be-the-ewc-cs2-2026-mvp-20260810202106150"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500174",
+      "question": "Will biguzera be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2175,
+        0.7825
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.435,
+      "spread": 0.435,
+      "liquidity": 111.8585,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-biguzera-be-the-ewc-cs2-2026-mvp-20260810202106167"
+    },
+    {
+      "event_id": "859496",
+      "event": "What will Trump say this week? (August 17 - August 23)",
+      "market_id": "3634274",
+      "question": "Will Trump say \"No No No\" this week?",
+      "end_date": "2026-08-23T23:59:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.57,
+        0.43
+      ],
+      "best_bid": 0.17,
+      "best_ask": 0.97,
+      "spread": 0.8,
+      "liquidity": 108.4209,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-trump-say-no-no-no-this-week-20260823"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500148",
+      "question": "Will FL4MUS be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2075,
+        0.7925
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.414,
+      "spread": 0.413,
+      "liquidity": 107.98024,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-fl4mus-be-the-ewc-cs2-2026-mvp-20260810202106141"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500125",
+      "question": "Will woxic be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.226,
+        0.774
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.451,
+      "spread": 0.45,
+      "liquidity": 107.7827,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-woxic-be-the-ewc-cs2-2026-mvp-20260810202106119"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500196",
+      "question": "Will faveN be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.175,
+        0.825
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.349,
+      "spread": 0.348,
+      "liquidity": 103.1621,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-faven-be-the-ewc-cs2-2026-mvp-20260810202106189"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500195",
+      "question": "Will blameF be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2355,
+        0.7645
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.47,
+      "spread": 0.469,
+      "liquidity": 101.9007,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-blamef-be-the-ewc-cs2-2026-mvp-20260810202106188"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500176",
+      "question": "Will brnz4n be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2265,
+        0.7735
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.452,
+      "spread": 0.451,
+      "liquidity": 100.99128,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-brnz4n-be-the-ewc-cs2-2026-mvp-20260810202106169"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500192",
+      "question": "Will westmelon be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2455,
+        0.7545
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.49,
+      "spread": 0.489,
+      "liquidity": 99.28761,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-westmelon-be-the-ewc-cs2-2026-mvp-20260810202106185"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500199",
+      "question": "Will qw1nk1 be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.249,
+        0.751
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.498,
+      "spread": 0.498,
+      "liquidity": 97.9403,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-qw1nk1-be-the-ewc-cs2-2026-mvp-20260810202106192"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500126",
+      "question": "Will Jimpphat be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.227,
+        0.773
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.453,
+      "spread": 0.452,
+      "liquidity": 97.5144,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-jimpphat-be-the-ewc-cs2-2026-mvp-20260810202106120"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500123",
+      "question": "Will XANTARES be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2405,
+        0.7595
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.48,
+      "spread": 0.479,
+      "liquidity": 97.2936,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-xantares-be-the-ewc-cs2-2026-mvp-20260810202106117"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500194",
+      "question": "Will tabseN be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.237,
+        0.763
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.473,
+      "spread": 0.472,
+      "liquidity": 95.7842,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-tabsen-be-the-ewc-cs2-2026-mvp-20260810202106187"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500179",
+      "question": "Will sjuush be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2465,
+        0.7535
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.493,
+      "spread": 0.493,
+      "liquidity": 93.85769,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-sjuush-be-the-ewc-cs2-2026-mvp-20260810202106172"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500193",
+      "question": "Will EmiliaQAQ be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2335,
+        0.7665
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.466,
+      "spread": 0.465,
+      "liquidity": 92.8364,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-emiliaqaq-be-the-ewc-cs2-2026-mvp-20260810202106186"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500180",
+      "question": "Will Lucky be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.244,
+        0.756
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.488,
+      "spread": 0.488,
+      "liquidity": 91.19352,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-lucky-be-the-ewc-cs2-2026-mvp-20260810202106173"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500154",
+      "question": "Will Jame be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0385,
+        0.9615
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.077,
+      "spread": 0.077,
+      "liquidity": 90.084,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-jame-be-the-ewc-cs2-2026-mvp-20260810202106147"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500186",
+      "question": "Will reck be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.215,
+        0.785
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.43,
+      "spread": 0.43,
+      "liquidity": 89.553,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-reck-be-the-ewc-cs2-2026-mvp-20260810202106179"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500189",
+      "question": "Will Swisher be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2475,
+        0.7525
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.495,
+      "spread": 0.495,
+      "liquidity": 89.3348,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-swisher-be-the-ewc-cs2-2026-mvp-20260810202106182"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500145",
+      "question": "Will hypex be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.219,
+        0.781
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.437,
+      "spread": 0.436,
+      "liquidity": 88.118,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-hypex-be-the-ewc-cs2-2026-mvp-20260810202106139"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500190",
+      "question": "Will JamYoung be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.248,
+        0.752
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.496,
+      "spread": 0.496,
+      "liquidity": 86.0226,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-jamyoung-be-the-ewc-cs2-2026-mvp-20260810202106183"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500151",
+      "question": "Will HooXi be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2345,
+        0.7655
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.469,
+      "spread": 0.469,
+      "liquidity": 82.924,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-hooxi-be-the-ewc-cs2-2026-mvp-20260810202106144"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500144",
+      "question": "Will REZ be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2495,
+        0.7505
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.499,
+      "spread": 0.499,
+      "liquidity": 81.63,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-rez-be-the-ewc-cs2-2026-mvp-20260810202106138"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500147",
+      "question": "Will Snax be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2455,
+        0.7545
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.491,
+      "spread": 0.491,
+      "liquidity": 78.055,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-snax-be-the-ewc-cs2-2026-mvp-20260810202106140"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500197",
+      "question": "Will dev1ce be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.033,
+        0.967
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.066,
+      "spread": 0.066,
+      "liquidity": 72.92222,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-dev1ce-be-the-ewc-cs2-2026-mvp-20260810202106190"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500105",
+      "question": "Will donk be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.26,
+        0.74
+      ],
+      "best_bid": 0.02,
+      "best_ask": 0.5,
+      "spread": 0.48,
+      "liquidity": 70.98,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-donk-be-the-ewc-cs2-2026-mvp-20260810202106099"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500149",
+      "question": "Will Staehr be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.309,
+        0.691
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.617,
+      "spread": 0.616,
+      "liquidity": 66.946,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-staehr-be-the-ewc-cs2-2026-mvp-20260810202106142"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500108",
+      "question": "Will NiKo be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.235,
+        0.765
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.47,
+      "spread": 0.47,
+      "liquidity": 62.8783,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-niko-be-the-ewc-cs2-2026-mvp-20260810202106102"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500156",
+      "question": "Will zweih be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.23,
+        0.77
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.46,
+      "spread": 0.46,
+      "liquidity": 50.647,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-zweih-be-the-ewc-cs2-2026-mvp-20260810202106149"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500158",
+      "question": "Will FL1T be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.25,
+        0.75
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.5,
+      "spread": 0.5,
+      "liquidity": 49.4399,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-fl1t-be-the-ewc-cs2-2026-mvp-20260810202106151"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500188",
+      "question": "Will slaxz- be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.25,
+        0.75
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.5,
+      "spread": 0.5,
+      "liquidity": 47.972,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-slaxz-be-the-ewc-cs2-2026-mvp-20260810202106181"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500191",
+      "question": "Will Mercury be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.25,
+        0.75
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.5,
+      "spread": 0.5,
+      "liquidity": 47.234,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-mercury-be-the-ewc-cs2-2026-mvp-20260810202106184"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500183",
+      "question": "Will Bymas be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.25,
+        0.75
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.5,
+      "spread": 0.5,
+      "liquidity": 45.385,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-bymas-be-the-ewc-cs2-2026-mvp-20260810202106176"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500119",
+      "question": "Will xertioN be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.24,
+        0.76
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.48,
+      "spread": 0.48,
+      "liquidity": 44.93,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-xertion-be-the-ewc-cs2-2026-mvp-20260810202106113"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500117",
+      "question": "Will makazze be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.24,
+        0.76
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.48,
+      "spread": 0.48,
+      "liquidity": 44.44,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-makazze-be-the-ewc-cs2-2026-mvp-20260810202106111"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500182",
+      "question": "Will Rainwaker be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.24,
+        0.76
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.48,
+      "spread": 0.48,
+      "liquidity": 43.945,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-rainwaker-be-the-ewc-cs2-2026-mvp-20260810202106175"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500122",
+      "question": "Will PR be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.24,
+        0.76
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.48,
+      "spread": 0.48,
+      "liquidity": 43.04,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-pr-be-the-ewc-cs2-2026-mvp-20260810202106116"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500155",
+      "question": "Will xiELO be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.25,
+        0.75
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.5,
+      "spread": 0.5,
+      "liquidity": 42.823,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-xielo-be-the-ewc-cs2-2026-mvp-20260810202106148"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500100",
+      "question": "Will flameZ be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.255,
+        0.745
+      ],
+      "best_bid": 0.01,
+      "best_ask": 0.5,
+      "spread": 0.49,
+      "liquidity": 42.74,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-flamez-be-the-ewc-cs2-2026-mvp-20260810202106094"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500198",
+      "question": "Will rain be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.25,
+        0.75
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.5,
+      "spread": 0.5,
+      "liquidity": 42.495,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-rain-be-the-ewc-cs2-2026-mvp-20260810202106191"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500187",
+      "question": "Will HexT be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2505,
+        0.7495
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.5,
+      "spread": 0.499,
+      "liquidity": 42.1451,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-hext-be-the-ewc-cs2-2026-mvp-20260810202106180"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500127",
+      "question": "Will kyxsan be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.25,
+        0.75
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.5,
+      "spread": 0.5,
+      "liquidity": 42.061,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-kyxsan-be-the-ewc-cs2-2026-mvp-20260810202106121"
+    },
+    {
+      "event_id": "859496",
+      "event": "What will Trump say this week? (August 17 - August 23)",
+      "market_id": "3634267",
+      "question": "Will Trump say \"Uber\" this week?",
+      "end_date": "2026-08-23T23:59:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.48,
+        0.52
+      ],
+      "best_bid": 0.05,
+      "best_ask": 0.91,
+      "spread": 0.86,
+      "liquidity": 41.1231,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-trump-say-uber-this-week-20260823"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500164",
+      "question": "Will dem0n be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2545,
+        0.7455
+      ],
+      "best_bid": 0.01,
+      "best_ask": 0.499,
+      "spread": 0.489,
+      "liquidity": 40.339,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-dem0n-be-the-ewc-cs2-2026-mvp-20260810202106157"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500139",
+      "question": "Will jcobbb be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.25,
+        0.75
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.5,
+      "spread": 0.5,
+      "liquidity": 39.492,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-jcobbb-be-the-ewc-cs2-2026-mvp-20260810202106133"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500106",
+      "question": "Will sh1ro be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.255,
+        0.745
+      ],
+      "best_bid": 0.01,
+      "best_ask": 0.5,
+      "spread": 0.49,
+      "liquidity": 37.98,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-sh1ro-be-the-ewc-cs2-2026-mvp-20260810202106100"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500200",
+      "question": "Will sinnopsyy be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2495,
+        0.7505
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.499,
+      "spread": 0.499,
+      "liquidity": 37.782,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-sinnopsyy-be-the-ewc-cs2-2026-mvp-20260810202106193"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500137",
+      "question": "Will r1nkle be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.24,
+        0.76
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.48,
+      "spread": 0.48,
+      "liquidity": 37.05,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-r1nkle-be-the-ewc-cs2-2026-mvp-20260810202106131"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500134",
+      "question": "Will HeavyGod be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.24,
+        0.76
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.48,
+      "spread": 0.48,
+      "liquidity": 35.16,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-heavygod-be-the-ewc-cs2-2026-mvp-20260810202106128"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500141",
+      "question": "Will JBOEN be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.245,
+        0.755
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.49,
+      "spread": 0.49,
+      "liquidity": 34.87,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-jboen-be-the-ewc-cs2-2026-mvp-20260810202106135"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500143",
+      "question": "Will Tauson be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.039,
+        0.961
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.078,
+      "spread": 0.078,
+      "liquidity": 34.599,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-tauson-be-the-ewc-cs2-2026-mvp-20260810202106137"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500135",
+      "question": "Will matys be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.24,
+        0.76
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.48,
+      "spread": 0.48,
+      "liquidity": 32.94,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-matys-be-the-ewc-cs2-2026-mvp-20260810202106129"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500161",
+      "question": "Will FalleN be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.24,
+        0.76
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.48,
+      "spread": 0.48,
+      "liquidity": 32.94,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-fallen-be-the-ewc-cs2-2026-mvp-20260810202106154"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500102",
+      "question": "Will ropz be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.255,
+        0.745
+      ],
+      "best_bid": 0.01,
+      "best_ask": 0.5,
+      "spread": 0.49,
+      "liquidity": 31.91,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-ropz-be-the-ewc-cs2-2026-mvp-20260810202106096"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500099",
+      "question": "Will ZywOo be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.4,
+        0.6
+      ],
+      "best_bid": 0.2,
+      "best_ask": 0.6,
+      "spread": 0.4,
+      "liquidity": 31.5335,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-zywoo-be-the-ewc-cs2-2026-mvp-20260810202106093"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500112",
+      "question": "Will karrigan be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2505,
+        0.7495
+      ],
+      "best_bid": 0.002,
+      "best_ask": 0.499,
+      "spread": 0.497,
+      "liquidity": 31.533,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-karrigan-be-the-ewc-cs2-2026-mvp-20260810202106106"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500140",
+      "question": "Will Twistzz be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2475,
+        0.7525
+      ],
+      "best_bid": 0.002,
+      "best_ask": 0.493,
+      "spread": 0.491,
+      "liquidity": 31.45895,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-twistzz-be-the-ewc-cs2-2026-mvp-20260810202106134"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500138",
+      "question": "Will frozen be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.25,
+        0.75
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.5,
+      "spread": 0.5,
+      "liquidity": 30.7,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-frozen-be-the-ewc-cs2-2026-mvp-20260810202106132"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500169",
+      "question": "Will esenthial be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2485,
+        0.7515
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.496,
+      "spread": 0.495,
+      "liquidity": 29.325,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-esenthial-be-the-ewc-cs2-2026-mvp-20260810202106162"
+    },
+    {
+      "event_id": "859496",
+      "event": "What will Trump say this week? (August 17 - August 23)",
+      "market_id": "3634269",
+      "question": "Will Trump say \"Assassin\" or \"Assassination\" this week?",
+      "end_date": "2026-08-23T23:59:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.535,
+        0.465
+      ],
+      "best_bid": 0.1,
+      "best_ask": 0.97,
+      "spread": 0.87,
+      "liquidity": 29.0228,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "will-trump-say-assassin-or-assassination-this-week-20260823"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500163",
+      "question": "Will YEKINDAR be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.25,
+        0.75
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.5,
+      "spread": 0.5,
+      "liquidity": 27.901,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-yekindar-be-the-ewc-cs2-2026-mvp-20260810202106156"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500110",
+      "question": "Will m0NESY be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.24,
+        0.76
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.48,
+      "spread": 0.48,
+      "liquidity": 27.58,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-m0nesy-be-the-ewc-cs2-2026-mvp-20260810202106104"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500101",
+      "question": "Will mezii be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2505,
+        0.7495
+      ],
+      "best_bid": 0.002,
+      "best_ask": 0.499,
+      "spread": 0.497,
+      "liquidity": 25.837,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-mezii-be-the-ewc-cs2-2026-mvp-20260810202106095"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500165",
+      "question": "Will xfl0ud be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2505,
+        0.7495
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.5,
+      "spread": 0.499,
+      "liquidity": 25.006,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-xfl0ud-be-the-ewc-cs2-2026-mvp-20260810202106158"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500185",
+      "question": "Will dumau be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2525,
+        0.7475
+      ],
+      "best_bid": 0.005,
+      "best_ask": 0.5,
+      "spread": 0.495,
+      "liquidity": 24.448,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-dumau-be-the-ewc-cs2-2026-mvp-20260810202106178"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500107",
+      "question": "Will tN1R be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2505,
+        0.7495
+      ],
+      "best_bid": 0.002,
+      "best_ask": 0.499,
+      "spread": 0.497,
+      "liquidity": 24.297,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-tn1r-be-the-ewc-cs2-2026-mvp-20260810202106101"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500132",
+      "question": "Will DarkMeister be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2505,
+        0.7495
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.5,
+      "spread": 0.499,
+      "liquidity": 23.55861,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-darkmeister-be-the-ewc-cs2-2026-mvp-20260810202106126"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500104",
+      "question": "Will zont1x be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2505,
+        0.7495
+      ],
+      "best_bid": 0.002,
+      "best_ask": 0.499,
+      "spread": 0.497,
+      "liquidity": 23.524,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-zont1x-be-the-ewc-cs2-2026-mvp-20260810202106098"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500170",
+      "question": "Will zorte be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2495,
+        0.7505
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.499,
+      "spread": 0.499,
+      "liquidity": 23.132,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-zorte-be-the-ewc-cs2-2026-mvp-20260810202106163"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500162",
+      "question": "Will molodoy be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.25,
+        0.75
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.5,
+      "spread": 0.5,
+      "liquidity": 22.91,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-molodoy-be-the-ewc-cs2-2026-mvp-20260810202106155"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500184",
+      "question": "Will latto be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2505,
+        0.7495
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.5,
+      "spread": 0.499,
+      "liquidity": 22.089,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-latto-be-the-ewc-cs2-2026-mvp-20260810202106177"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500109",
+      "question": "Will TeSeS be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2505,
+        0.7495
+      ],
+      "best_bid": 0.002,
+      "best_ask": 0.499,
+      "spread": 0.497,
+      "liquidity": 22.012,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-teses-be-the-ewc-cs2-2026-mvp-20260810202106103"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500115",
+      "question": "Will iM be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.2505,
+        0.7495
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.5,
+      "spread": 0.499,
+      "liquidity": 21.99,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-im-be-the-ewc-cs2-2026-mvp-20260810202106109"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500159",
+      "question": "Will yuurih be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.255,
+        0.745
+      ],
+      "best_bid": 0.01,
+      "best_ask": 0.5,
+      "spread": 0.49,
+      "liquidity": 21.143,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-yuurih-be-the-ewc-cs2-2026-mvp-20260810202106152"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500111",
+      "question": "Will kyousuke be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.24,
+        0.76
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.48,
+      "spread": 0.48,
+      "liquidity": 21.1,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-kyousuke-be-the-ewc-cs2-2026-mvp-20260810202106105"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500160",
+      "question": "Will KSCERATO be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.255,
+        0.745
+      ],
+      "best_bid": 0.01,
+      "best_ask": 0.5,
+      "spread": 0.49,
+      "liquidity": 20.844,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-kscerato-be-the-ewc-cs2-2026-mvp-20260810202106153"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500150",
+      "question": "Will jabbi be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0385,
+        0.9615
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.077,
+      "spread": 0.077,
+      "liquidity": 20.563,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-jabbi-be-the-ewc-cs2-2026-mvp-20260810202106143"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500098",
+      "question": "Will apEX be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.251,
+        0.749
+      ],
+      "best_bid": 0.002,
+      "best_ask": 0.5,
+      "spread": 0.498,
+      "liquidity": 19.881,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-apex-be-the-ewc-cs2-2026-mvp-20260810202106092"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500103",
+      "question": "Will magixx be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.251,
+        0.749
+      ],
+      "best_bid": 0.002,
+      "best_ask": 0.5,
+      "spread": 0.498,
+      "liquidity": 18.869,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-magixx-be-the-ewc-cs2-2026-mvp-20260810202106097"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500175",
+      "question": "Will saffee be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.038,
+        0.962
+      ],
+      "best_bid": 0.0,
+      "best_ask": 0.076,
+      "spread": 0.076,
+      "liquidity": 18.8102,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-saffee-be-the-ewc-cs2-2026-mvp-20260810202106168"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500131",
+      "question": "Will Tikuak be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0335,
+        0.9665
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.066,
+      "spread": 0.065,
+      "liquidity": 16.541,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-tikuak-be-the-ewc-cs2-2026-mvp-20260810202106125"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500168",
+      "question": "Will npl be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.039,
+        0.961
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.077,
+      "spread": 0.076,
+      "liquidity": 13.55,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-npl-be-the-ewc-cs2-2026-mvp-20260810202106161"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500114",
+      "question": "Will Aleksib be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0345,
+        0.9655
+      ],
+      "best_bid": 0.002,
+      "best_ask": 0.067,
+      "spread": 0.065,
+      "liquidity": 12.15836,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-aleksib-be-the-ewc-cs2-2026-mvp-20260810202106108"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500142",
+      "question": "Will Neityu be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.034,
+        0.966
+      ],
+      "best_bid": 0.002,
+      "best_ask": 0.066,
+      "spread": 0.064,
+      "liquidity": 12.03506,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-neityu-be-the-ewc-cs2-2026-mvp-20260810202106136"
+    },
+    {
+      "event_id": "829850",
+      "event": "EWC CS2 2026: MVP",
+      "market_id": "3500129",
+      "question": "Will Techno4K be the EWC CS2 2026 MVP?",
+      "end_date": null,
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.0325,
+        0.9675
+      ],
+      "best_bid": 0.001,
+      "best_ask": 0.064,
+      "spread": 0.063,
+      "liquidity": 8.911,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+      "slug": "will-techno4k-be-the-ewc-cs2-2026-mvp-20260810202106123"
+    },
+    {
+      "event_id": "884980",
+      "event": "Where will it rain on August 21?",
+      "market_id": "3760161",
+      "question": "Will it rain in Denver, CO on August 21?",
+      "end_date": "2026-08-22T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.5,
+        0.5
+      ],
+      "best_bid": 0.02,
+      "best_ask": 0.98,
+      "spread": 0.96,
+      "liquidity": 2.2797,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "where-will-it-rain-on-august-21-2026-denver-co"
+    },
+    {
+      "event_id": "884980",
+      "event": "Where will it rain on August 21?",
+      "market_id": "3760163",
+      "question": "Will it rain in Atlanta, GA on August 21?",
+      "end_date": "2026-08-22T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.5,
+        0.5
+      ],
+      "best_bid": 0.02,
+      "best_ask": 0.98,
+      "spread": 0.96,
+      "liquidity": 2.2797,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "where-will-it-rain-on-august-21-2026-atlanta-ga"
+    },
+    {
+      "event_id": "884980",
+      "event": "Where will it rain on August 21?",
+      "market_id": "3760168",
+      "question": "Will it rain in San Francisco, CA on August 21?",
+      "end_date": "2026-08-22T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.5,
+        0.5
+      ],
+      "best_bid": 0.02,
+      "best_ask": 0.98,
+      "spread": 0.96,
+      "liquidity": 2.2797,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "where-will-it-rain-on-august-21-2026-san-francisco-ca"
+    },
+    {
+      "event_id": "884980",
+      "event": "Where will it rain on August 21?",
+      "market_id": "3760154",
+      "question": "Will it rain in New York, NY on August 21?",
+      "end_date": "2026-08-22T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.5,
+        0.5
+      ],
+      "best_bid": 0.02,
+      "best_ask": 0.98,
+      "spread": 0.96,
+      "liquidity": 2.2796,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "where-will-it-rain-on-august-21-2026-new-york-ny"
+    },
+    {
+      "event_id": "884980",
+      "event": "Where will it rain on August 21?",
+      "market_id": "3760156",
+      "question": "Will it rain in Chicago, IL on August 21?",
+      "end_date": "2026-08-22T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.5,
+        0.5
+      ],
+      "best_bid": 0.02,
+      "best_ask": 0.98,
+      "spread": 0.96,
+      "liquidity": 2.2796,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "where-will-it-rain-on-august-21-2026-chicago-il"
+    },
+    {
+      "event_id": "884980",
+      "event": "Where will it rain on August 21?",
+      "market_id": "3760157",
+      "question": "Will it rain in Houston, TX on August 21?",
+      "end_date": "2026-08-22T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.5,
+        0.5
+      ],
+      "best_bid": 0.02,
+      "best_ask": 0.98,
+      "spread": 0.96,
+      "liquidity": 2.2796,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "where-will-it-rain-on-august-21-2026-houston-tx"
+    },
+    {
+      "event_id": "884980",
+      "event": "Where will it rain on August 21?",
+      "market_id": "3760158",
+      "question": "Will it rain in Dallas, TX on August 21?",
+      "end_date": "2026-08-22T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.5,
+        0.5
+      ],
+      "best_bid": 0.02,
+      "best_ask": 0.98,
+      "spread": 0.96,
+      "liquidity": 2.2796,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "where-will-it-rain-on-august-21-2026-dallas-tx"
+    },
+    {
+      "event_id": "884980",
+      "event": "Where will it rain on August 21?",
+      "market_id": "3760159",
+      "question": "Will it rain in Phoenix, AZ on August 21?",
+      "end_date": "2026-08-22T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.5,
+        0.5
+      ],
+      "best_bid": 0.02,
+      "best_ask": 0.98,
+      "spread": 0.96,
+      "liquidity": 2.2796,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "where-will-it-rain-on-august-21-2026-phoenix-az"
+    },
+    {
+      "event_id": "884980",
+      "event": "Where will it rain on August 21?",
+      "market_id": "3760160",
+      "question": "Will it rain in Philadelphia, PA on August 21?",
+      "end_date": "2026-08-22T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.5,
+        0.5
+      ],
+      "best_bid": 0.02,
+      "best_ask": 0.98,
+      "spread": 0.96,
+      "liquidity": 2.2796,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "where-will-it-rain-on-august-21-2026-philadelphia-pa"
+    },
+    {
+      "event_id": "884980",
+      "event": "Where will it rain on August 21?",
+      "market_id": "3760162",
+      "question": "Will it rain in Washington, DC on August 21?",
+      "end_date": "2026-08-22T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.505,
+        0.5
+      ],
+      "best_bid": 0.02,
+      "best_ask": 0.99,
+      "spread": 0.97,
+      "liquidity": 2.2796,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "where-will-it-rain-on-august-21-2026-washington-dc"
+    },
+    {
+      "event_id": "884980",
+      "event": "Where will it rain on August 21?",
+      "market_id": "3760164",
+      "question": "Will it rain in Miami, FL on August 21?",
+      "end_date": "2026-08-22T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.5,
+        0.5
+      ],
+      "best_bid": 0.02,
+      "best_ask": 0.98,
+      "spread": 0.96,
+      "liquidity": 2.2796,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "where-will-it-rain-on-august-21-2026-miami-fl"
+    },
+    {
+      "event_id": "884980",
+      "event": "Where will it rain on August 21?",
+      "market_id": "3760165",
+      "question": "Will it rain in Seattle, WA on August 21?",
+      "end_date": "2026-08-22T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.5,
+        0.5
+      ],
+      "best_bid": 0.02,
+      "best_ask": 0.98,
+      "spread": 0.96,
+      "liquidity": 2.2796,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "where-will-it-rain-on-august-21-2026-seattle-wa"
+    },
+    {
+      "event_id": "884980",
+      "event": "Where will it rain on August 21?",
+      "market_id": "3760166",
+      "question": "Will it rain in Boston, MA on August 21?",
+      "end_date": "2026-08-22T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.5,
+        0.5
+      ],
+      "best_bid": 0.02,
+      "best_ask": 0.98,
+      "spread": 0.96,
+      "liquidity": 2.2796,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "where-will-it-rain-on-august-21-2026-boston-ma"
+    },
+    {
+      "event_id": "884980",
+      "event": "Where will it rain on August 21?",
+      "market_id": "3760167",
+      "question": "Will it rain in New Orleans, LA on August 21?",
+      "end_date": "2026-08-22T04:00:00Z",
+      "accepting_orders": true,
+      "restricted": true,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.5,
+        0.5
+      ],
+      "best_bid": 0.02,
+      "best_ask": 0.98,
+      "spread": 0.96,
+      "liquidity": 2.2796,
+      "volume_24h": 0.0,
+      "fees_enabled": true,
+      "resolution_source": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+      "slug": "where-will-it-rain-on-august-21-2026-new-orleans-la"
+    }
+  ]
+}
