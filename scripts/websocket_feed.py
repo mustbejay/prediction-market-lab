@@ -141,10 +141,11 @@ class PolymarketWebSocket:
             # Keep last 100 prices
             snap.price_history = snap.price_history[-100:]
         else:
+            outcome = "Up" if "up" in data.get("slug", "").lower() else "Down"
             snap = MarketSnapshot(
                 condition_id=condition_id,
                 question=data.get("question", "")[:60],
-                outcome="Up" if "up" in data.get("slug", "").lower(),
+                outcome=outcome,
                 price=p_up,
                 timestamp=datetime.now(timezone.utc),
             )
