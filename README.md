@@ -1,37 +1,96 @@
 # Prediction Market Lab
 
-An isolated, credential-free evaluation lab for prediction-market infrastructure and open-source bots.
+Venue-agnostic prediction market research, backtesting, and paper trading system.
 
-## Current objective
+**Status:** Backtesting complete. Ready for paper trading once terms/jurisdiction confirmed.
 
-Reproduce what shortlisted projects can actually do before selecting a foundation for a read-only market collector, replay simulator, paper trader, and opportunity scanner.
+## Architecture
 
-## Safety rules
+```
+┌─────────────────────────────────────────────┐
+│           Command Center                    │
+│  Discovery → Inventory → Regime → Scoring   │
+└─────────────────────────────────────────────┘
+                      ↓
+┌─────────────────────────────────────────────┐
+│           Safety Layer                      │
+│  KillSwitch + AuditTrail (fail-closed)      │
+└─────────────────────────────────────────────┘
+                      ↓
+┌─────────────────────────────────────────────┐
+│           Venues                            │
+│  Polymarket (CLOB) | Limitless (Base)       │
+└─────────────────────────────────────────────┘
+```
 
-- No funded wallets, API secrets, private keys, or live order permissions.
-- Do not bypass geographic or platform restrictions.
-- Prefer public market data, fixtures, unit tests, paper mode, replay, and shadow execution.
-- Never count midpoint-only P&L as executable.
-- Treat repository profit claims as unverified until reproduced from fills.
-- Do not modify the vendored repositories except in clearly named throwaway experiment copies.
+## Backtest Results
 
-## Evaluation gates
+### Limitless (300 snapshots, 272 lifecycles)
+| Strategy | N | Hit % | Avg P&L/share |
+|----------|---|-------|---------------|
+| H7 [0.5-0.6] | 42 | 67% | **+0.068** |
+| H2 Late fav | 132 | 89% | **+0.023** |
+| H3 Momentum | 84 | 86% | **+0.022** |
 
-1. **Provenance:** active project, clear licence, pinned dependencies, understandable ownership.
-2. **Installation:** clean install on Windows or documented container path.
-3. **Security:** no key exfiltration, unsafe shell execution, hidden downloads, or withdrawal capability.
-4. **Data:** live public-data or reproducible fixture ingestion.
-5. **Simulation:** dry-run, shadow, paper, or deterministic replay.
-6. **Execution realism:** bid/ask, fees, partial fills, latency and rejected orders.
-7. **Strategy evidence:** tests and reproducible output, not screenshots or README claims.
-8. **Fit:** supports a Next.js/FastAPI intelligence product without forcing live trading.
+### Polymarket (130 wallet markets)
+| Metric | Value |
+|--------|-------|
+| Two-sided % | 86.9% |
+| Median pair cost | **0.83** (-17%) |
+| Pairs < 1.0 | 77% |
+| Net edge (H7) | **+0.066/share** |
 
-## Initial candidates
+### Fee Comparison
+| Venue | Pair Cost | Arb Windows | Best For |
+|-------|-----------|-------------|----------|
+| Limitless | +8.5% | 0% | Niche directional |
+| Polymarket | **-17%** | **77%** | Momentum + Hedging |
 
-- PMXT — multi-venue integration layer.
-- Homerun — research/backtest/shadow platform.
-- poly-maker — market-making risk-control reference.
-- oracle3 — probability pricing and constraint-arbitrage research.
-- Polymarket/Kalshi Weather Bot — ensemble weather prototype.
+## Installation
 
-Vendored source is stored under `vendor/` and excluded from this repository. Results belong under `spikes/` and `reports/`.
+```bash
+cd prediction-market-lab
+python -m venv .venv
+source .venv/bin/activate  # or .venv\Scripts\activate on Windows
+pip install -r requirements.txt
+```
+
+## Running Analysis
+
+```bash
+# Run hypothesis battery on Limitless data
+python scripts/hypothesis_battery_full.py
+
+# Compare venue fees
+python scripts/scanner.py --compare
+
+# Live scanner (scans Polymarket every 2 runs)
+python scripts/scanner.py --runs 3
+```
+
+## Data
+
+- `data/snapshots/` — Limitless hourly snapshots (300 files)
+- `data/wallet-ce25-sample.json` — Polymarket wallet trade history
+- `scan-history.jsonl` — Command center scan logs
+
+## Safety
+
+All execution is **fail-closed** by default:
+1. Create `KILL` file to halt all operations
+2. All scans logged to `audit/orders.jsonl`
+3. Execution policy requires 4 approvals
+
+## Repositories
+
+| Repo | Purpose |
+|------|---------|
+| [prediction-market-lab](https://github.com/mustbejay/prediction-market-lab) | This repo — backtesting, analysis, research |
+| [Predictions-Lab-tablet](https://github.com/mustbejay/Predictions-Lab) | Production tablet agent with execution framework |
+
+## Next Steps
+
+1. Paper trade H7 on Polymarket (small size)
+2. Add real-time WebSocket feed
+3. Build automated execution once legal review complete
+4. Expand to Kalshi, Hyperliquid, other venues
