@@ -200,9 +200,21 @@ async def get_markets():
 @app.get("/api/load-sample")
 async def load_sample_data():
     """Load sample data from historical snapshots for demo."""
-    snapshot_dir = Path("/c/Users/user/Downloads/prediction-lab/prediction_lab_backup_20260825/data/snapshots")
-    if not snapshot_dir.exists():
-        return {"error": "Sample data not found"}
+    # Try multiple possible locations (use native Windows paths)
+    snapshot_dirs = [
+        Path("C:/Users/user/Downloads/prediction-lab/prediction_lab_backup_20260825/data/snapshots"),
+        Path("data/snapshots"),
+        Path("..") / "prediction_lab_backup_20260825" / "data" / "snapshots",
+    ]
+    
+    snapshot_dir = None
+    for d in snapshot_dirs:
+        if d.exists():
+            snapshot_dir = d
+            break
+    
+    if not snapshot_dir:
+        return {"error": f"Sample data not found. Checked: {[str(d) for d in snapshot_dirs]}"}
     
     files = sorted(snapshot_dir.glob("limitless_*.json"))
     if not files:
