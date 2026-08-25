@@ -7,6 +7,8 @@
 | poly-maker | https://github.com/warproxxx/poly-maker | Dry run, preflight, market-making safety controls |
 | oracle3 | https://github.com/YichengYang-Ethan/oracle3 | Tests, pricing model, constraint-arbitrage logic |
 | Weather Bot | https://github.com/suislanchez/polymarket-kalshi-weather-bot | Ensemble ingestion, calibration, simulation, resolution handling |
+| OpenAlgo family | https://github.com/marketcalls/ | Broker-agnostic execution layer, safety patterns (kill switch, audit trail, RiskGuard) |
+| Teraus bots | Medium articles | 15m dump-hedge strategy, inventory structure analysis, multi-bot pattern recognition |
 
 ## Required evidence per candidate
 
