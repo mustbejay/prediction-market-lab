@@ -225,6 +225,53 @@ async def get_markets():
 @app.get("/api/load-sample")
 async def load_sample_data():
     """Load sample data from historical snapshots for demo."""
+    # First try live Limitless API
+    try:
+        import sys
+        sys.path.insert(0, str(Path(__file__).parent.parent))
+        from scripts.limitless_client import fetch_limitless_markets
+        markets = fetch_limitless_markets()
+        loaded = 0
+        for m in markets:
+            cond_id = m.get("slug", "")
+            if not cond_id:
+                continue
+            
+            state.markets[cond_id] = MarketSnapshot(
+                condition_id=cond_id,
+                question=m.get("question", "")[:60],
+                outcome="Up" if m.get("price", 0) < 0.5 else "Down",
+                price=m.get("price", 0),
+                timestamp=datetime.now(timezone.utc),
+                price_history=[m.get("price", 0)],
+                volume_24h=m.get("volume", 0),
+            )
+            loaded += 1
+            
+            # Check for H7 opportunity (p in [0.5, 0.6))
+            if 0.50 <= m.get("price", 0) < 0.60:
+                state.opportunities.append(Opportunity(
+                    strategy="H7_high", condition_id=cond_id,
+                    question=m.get("question", "")[:60], confidence=0.8,
+                    entry_price=m.get("price", 0), expected_edge=0.066,
+                    reason=f"Live: p(Up)={m.get('price', 0):.3f}",
+                ))
+            
+            # Check for H2 opportunity (late fav, p >= 0.70)
+            if m.get("price", 0) >= 0.70:
+                state.opportunities.append(Opportunity(
+                    strategy="H2", condition_id=cond_id,
+                    question=m.get("question", "")[:60], confidence=0.7,
+                    entry_price=m.get("price", 0), expected_edge=0.022,
+                    reason=f"Live: Late fav p(Up)={m.get('price', 0):.3f}",
+                ))
+        
+        state.opportunities = state.opportunities[-50:]
+        return {"loaded": loaded, "total_markets": len(state.markets), "opportunities": len(state.opportunities), "source": "limitless_live"}
+    except Exception as e:
+        print(f"Limitless API error: {e}", file=sys.stderr)
+    
+    # Fallback to local sample data
     snapshot_dirs = [
         Path("C:/Users/user/Downloads/prediction-lab/prediction_lab_backup_20260825/data/snapshots"),
         Path("data/snapshots"),
@@ -237,7 +284,7 @@ async def load_sample_data():
             break
     
     if not snapshot_dir:
-        return {"error": "Sample data not found"}
+        return {"error": "No data sources available"}
     
     files = sorted(snapshot_dir.glob("limitless_*.json"))
     if not files:
@@ -282,7 +329,7 @@ async def load_sample_data():
             ))
     
     state.opportunities = state.opportunities[-50:]
-    return {"loaded": loaded, "total_markets": len(state.markets), "opportunities": len(state.opportunities)}
+    return {"loaded": loaded, "total_markets": len(state.markets), "opportunities": len(state.opportunities), "source": "sample_data"}
 
 
 @app.get("/api/prices/{condition_id}")
