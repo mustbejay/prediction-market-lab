@@ -1,21 +1,22 @@
 #!/usr/bin/env python3
-"""FastAPI server for prediction market dashboard - FINAL version."""
+"""FastAPI server for prediction market dashboard with live API."""
 
 import json
 import sys
 import asyncio
 import urllib.request
 import urllib.parse
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from collections import defaultdict
 from dataclasses import dataclass, field, asdict
 from typing import Optional
 import uuid
+import statistics
 
 from fastapi import FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, FileResponse
 from pydantic import BaseModel
 
 
@@ -23,7 +24,7 @@ from pydantic import BaseModel
 # CONFIGURATION
 # ============================================================================
 
-POLYMARKET_GAMMA = "https://gamma-api.polymarket.com/public-search"
+POLYMARKET_SEARCH = "https://gamma-api.polymarket.com/public-search"
 POLYMARKET_MARKETS = "https://gamma-api.polymarket.com/markets"
 UA = "predictions-lab/0.1 (+scanner)"
 DATA_DIR = Path(__file__).parent.parent / "data"
@@ -41,6 +42,8 @@ class MarketSnapshot:
     price: float
     timestamp: datetime
     price_history: list[float] = field(default_factory=list)
+    volume_24h: float = 0.0
+    open_interest: float = 0.0
 
 
 @dataclass
@@ -53,6 +56,7 @@ class Opportunity:
     expected_edge: float
     reason: str
     timestamp: datetime = field(default_factory=lambda: datetime.now(timezone.utc))
+    volume_24h: float = 0.0
 
 
 @dataclass
@@ -65,6 +69,8 @@ class PaperPosition:
     entry_time: datetime
     condition_id: str
     question: str
+    stop_loss: Optional[float] = None
+    take_profit: Optional[float] = None
 
 
 @dataclass
@@ -76,6 +82,7 @@ class DashboardState:
     account_balance: float = 10000.0
     last_scan: Optional[datetime] = None
     scan_count: int = 0
+    error_count: int = 0
 
 
 # ============================================================================
@@ -94,6 +101,8 @@ config = {"paper_size": 5.0, "max_positions": 3, "poll_interval": 30}
 class EnterPositionRequest(BaseModel):
     opportunity_id: str
     size: float = 5.0
+    stop_loss: Optional[float] = None
+    take_profit: Optional[float] = None
 
 
 class ClosePositionRequest(BaseModel):
@@ -118,6 +127,7 @@ async def get_state():
         "account_balance": state.account_balance,
         "last_scan": state.last_scan.isoformat() if state.last_scan else None,
         "scan_count": state.scan_count,
+        "error_count": state.error_count,
         "config": config,
     }
 
@@ -132,15 +142,27 @@ async def enter_position(req: EnterPositionRequest):
     if len(state.positions) >= config["max_positions"]:
         raise HTTPException(status_code=400, detail="Max positions reached")
 
+    # Determine side based on strategy
+    if opp.strategy == "H7_high":
+        side = "Up" if opp.entry_price < 0.55 else "Down"
+    elif opp.strategy == "H2":
+        side = "Up" if opp.entry_price >= 0.70 else "Down"
+    elif opp.strategy == "H3":
+        side = "Up"  # Momentum continuation
+    else:
+        side = "Up"
+
     position = PaperPosition(
         position_id=str(uuid.uuid4())[:8],
         strategy=opp.strategy,
-        side="Up" if opp.entry_price < 0.6 else "Down",
+        side=side,
         entry_price=opp.entry_price,
         size=req.size,
         entry_time=datetime.now(timezone.utc),
         condition_id=opp.condition_id,
         question=opp.question,
+        stop_loss=req.stop_loss,
+        take_profit=req.take_profit,
     )
     state.positions.append(position)
     return {"success": True, "position": asdict(position)}
@@ -153,7 +175,7 @@ async def close_position(req: ClosePositionRequest):
     if not position:
         raise HTTPException(status_code=404, detail="Position not found")
 
-    # Calculate P&L using exit price
+    # Calculate P&L
     if position.side == "Up":
         pnl = (req.exit_price - position.entry_price) * position.size
     else:
@@ -177,9 +199,9 @@ async def update_config(new_config: dict):
 async def get_backtest_results():
     """Return backtest results from historical data."""
     return {
-        "H7_high": {"edge": 0.066, "win_rate": 0.67, "sample": 42},
-        "H2": {"edge": 0.022, "win_rate": 0.89, "sample": 132},
-        "H3": {"edge": 0.022, "win_rate": 0.86, "sample": 84},
+        "H7_high": {"edge": 0.066, "win_rate": 0.67, "sample": 42, "description": "0.5 discontinuity"},
+        "H2": {"edge": 0.022, "win_rate": 0.89, "sample": 132, "description": "Late favourite"},
+        "H3": {"edge": 0.022, "win_rate": 0.86, "sample": 84, "description": "Momentum"},
     }
 
 
@@ -191,20 +213,19 @@ async def get_markets():
             "condition_id": k,
             "question": v.question,
             "price": v.price,
+            "volume": v.volume_24h,
             "timestamp": v.timestamp.isoformat(),
         }
-        for k, v in state.markets.items()
-    ][:50]
+        for k, v in list(state.markets.items())[-50:]
+    ]
 
 
 @app.get("/api/load-sample")
 async def load_sample_data():
     """Load sample data from historical snapshots for demo."""
-    # Try multiple possible locations (use native Windows paths)
     snapshot_dirs = [
         Path("C:/Users/user/Downloads/prediction-lab/prediction_lab_backup_20260825/data/snapshots"),
         Path("data/snapshots"),
-        Path("..") / "prediction_lab_backup_20260825" / "data" / "snapshots",
     ]
     
     snapshot_dir = None
@@ -214,13 +235,12 @@ async def load_sample_data():
             break
     
     if not snapshot_dir:
-        return {"error": f"Sample data not found. Checked: {[str(d) for d in snapshot_dirs]}"}
+        return {"error": "Sample data not found"}
     
     files = sorted(snapshot_dir.glob("limitless_*.json"))
     if not files:
         return {"error": "No snapshot files found"}
     
-    # Load latest snapshot
     with open(files[-1]) as f:
         data = json.load(f)
     
@@ -241,7 +261,6 @@ async def load_sample_data():
         except (TypeError, ValueError):
             continue
         
-        # Create market snapshot
         state.markets[cond_id] = MarketSnapshot(
             condition_id=cond_id,
             question=m.get("title", "")[:60],
@@ -252,20 +271,25 @@ async def load_sample_data():
         )
         loaded += 1
         
-        # Check for opportunities
         if 0.50 <= p_up < 0.60:
-            opp = Opportunity(
-                strategy="H7_high",
-                condition_id=cond_id,
-                question=m.get("title", "")[:60],
-                confidence=0.8,
-                entry_price=p_up,
-                expected_edge=0.066,
-                reason=f"p(Up)={p_up:.3f} in [0.5, 0.6)"
-            )
-            state.opportunities.append(opp)
+            state.opportunities.append(Opportunity(
+                strategy="H7_high", condition_id=cond_id,
+                question=m.get("title", "")[:60], confidence=0.8,
+                entry_price=p_up, expected_edge=0.066,
+                reason=f"p(Up)={p_up:.3f} in [0.5, 0.6)",
+            ))
     
+    state.opportunities = state.opportunities[-50:]
     return {"loaded": loaded, "total_markets": len(state.markets), "opportunities": len(state.opportunities)}
+
+
+@app.get("/api/prices/{condition_id}")
+async def get_price_history(condition_id: str):
+    """Get price history for a market."""
+    snap = state.markets.get(condition_id)
+    if not snap:
+        return {"error": "Market not found"}
+    return {"prices": snap.price_history[-100:], "timestamps": [snap.timestamp.isoformat()]}
 
 
 # ============================================================================
@@ -278,6 +302,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prediction Market Lab</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -297,150 +322,95 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             --warning: #f59e0b;
             --danger: #ef4444;
         }
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+        .container { max-width: 1600px; margin: 0 auto; padding: 20px; }
         header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            border-bottom: 1px solid var(--border);
-            margin-bottom: 20px;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px;
         }
         h1 { font-size: 24px; font-weight: 600; }
         .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 16px;
-            margin-bottom: 24px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px; margin-bottom: 24px;
         }
         .stat-card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 16px;
+            background: var(--card); border: 1px solid var(--border);
+            border-radius: 8px; padding: 16px;
         }
-        .stat-label {
-            font-size: 12px;
-            color: var(--muted);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        .stat-value {
-            font-size: 28px;
-            font-weight: 600;
-            margin-top: 4px;
-        }
+        .stat-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+        .stat-value { font-size: 28px; font-weight: 600; margin-top: 4px; }
         .stat-value.positive { color: var(--success); }
         .stat-value.negative { color: var(--danger); }
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        @media (max-width: 900px) {
-            .grid { grid-template-columns: 1fr; }
-        }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 1200px) { .grid { grid-template-columns: 1fr; } }
         .card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 20px;
+            background: var(--card); border: 1px solid var(--border);
+            border-radius: 8px; padding: 20px; margin-bottom: 20px;
         }
         .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            display: flex; justify-content: space-between; align-items: center;
             margin-bottom: 16px;
         }
-        .card-title {
-            font-size: 16px;
-            font-weight: 600;
-        }
+        .card-title { font-size: 16px; font-weight: 600; }
         .badge {
-            display: inline-block;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: 500;
+            display: inline-block; padding: 4px 8px; border-radius: 4px;
+            font-size: 12px; font-weight: 500;
         }
         .badge-h7 { background: #3b82f6; color: white; }
         .badge-h2 { background: #22c55e; color: white; }
         .badge-h3 { background: #f59e0b; color: black; }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid var(--border);
-        }
-        th {
-            font-size: 12px;
-            color: var(--muted);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid var(--border); }
+        th { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
         tr:hover { background: rgba(255,255,255,0.02); }
         .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 8px 16px;
-            border: none;
-            border-radius: 6px;
-            font-size: 14px;
-            cursor: pointer;
-            transition: opacity 0.2s;
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 8px 16px; border: none; border-radius: 6px;
+            font-size: 14px; cursor: pointer; transition: opacity 0.2s;
         }
         .btn:hover { opacity: 0.8; }
         .btn-primary { background: var(--accent); color: white; }
         .btn-success { background: var(--success); color: white; }
         .btn-danger { background: var(--danger); color: white; }
         .btn-sm { padding: 4px 12px; font-size: 12px; }
-        .empty-state {
-            text-align: center;
-            padding: 40px;
-            color: var(--muted);
+        .empty-state { text-align: center; padding: 40px; color: var(--muted); }
+        .pulse { animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .live-dot { display: inline-block; width: 8px; height: 8px; background: var(--success); border-radius: 50%; margin-right: 8px; }
+        .controls { display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+        .refresh-btn, .load-btn {
+            background: none; border: 1px solid var(--border); color: var(--foreground);
+            padding: 8px 16px; border-radius: 6px; cursor: pointer;
         }
-        .pulse {
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        .live-dot {
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            background: var(--success);
-            border-radius: 50%;
-            margin-right: 8px;
-        }
-        .refresh-btn {
-            background: none;
-            border: 1px solid var(--border);
-            color: var(--foreground);
-            padding: 8px 16px;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-        .refresh-btn:hover { background: var(--border); }
-        .load-btn {
-            background: var(--accent);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-            margin-bottom: 20px;
-        }
+        .refresh-btn:hover, .load-btn:hover { background: var(--border); }
+        .load-btn { background: var(--accent); color: white; border: none; }
         .load-btn:hover { opacity: 0.9; }
+        .chart-container { position: relative; height: 300px; margin-top: 20px; }
+        .modal {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8); z-index: 1000; align-items: center; justify-content: center;
+        }
+        .modal.active { display: flex; }
+        .modal-content {
+            background: var(--card); border: 1px solid var(--border);
+            border-radius: 8px; padding: 24px; max-width: 400px; width: 90%;
+        }
+        .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+        .modal-title { font-size: 18px; font-weight: 600; }
+        .modal-close { background: none; border: none; color: var(--muted); font-size: 24px; cursor: pointer; }
+        .form-group { margin-bottom: 16px; }
+        .form-label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+        .form-input {
+            width: 100%; padding: 10px; background: var(--background);
+            border: 1px solid var(--border); border-radius: 6px; color: var(--foreground);
+        }
+        .toast {
+            position: fixed; bottom: 20px; right: 20px; background: var(--card);
+            border: 1px solid var(--border); border-radius: 8px; padding: 16px;
+            z-index: 2000; transform: translateY(100px); opacity: 0; transition: all 0.3s;
+        }
+        .toast.show { transform: translateY(0); opacity: 1; }
+        .toast.success { border-color: var(--success); }
+        .toast.error { border-color: var(--danger); }
     </style>
 </head>
 <body>
@@ -453,7 +423,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             </div>
         </header>
 
-        <button class="load-btn" onclick="loadSampleData()">Load Sample Data (Limitless snapshots)</button>
+        <div class="controls">
+            <button class="load-btn" onclick="loadSampleData()">Load Sample Data</button>
+            <button class="refresh-btn" onclick="fetchState()">Refresh State</button>
+        </div>
 
         <div class="stats">
             <div class="stat-card">
@@ -471,6 +444,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             <div class="stat-card">
                 <div class="stat-label">Open Positions</div>
                 <div class="stat-value" id="positions-count">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Scans Run</div>
+                <div class="stat-value" id="scan-count">0</div>
             </div>
         </div>
 
@@ -491,7 +468,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         </tr>
                     </thead>
                     <tbody id="opportunities-table">
-                        <tr><td colspan="5" class="empty-state">Click "Load Sample Data" to see opportunities</td></tr>
+                        <tr><td colspan="5" class="empty-state">Loading...</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -512,13 +489,23 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         </tr>
                     </thead>
                     <tbody id="positions-table">
-                        <tr><td colspan="5" class="empty-state">No open positions</td></tr>
+                        <tr><td colspan="5" class="empty-state">No positions</td></tr>
                     </tbody>
                 </table>
             </div>
         </div>
 
-        <div class="card" style="margin-top: 20px;">
+        <div class="card" id="chart-card" style="display: none;">
+            <div class="card-header">
+                <span class="card-title" id="chart-title">Price History</span>
+                <button class="refresh-btn btn-sm" onclick="closeChart()">Close</button>
+            </div>
+            <div class="chart-container">
+                <canvas id="price-chart"></canvas>
+            </div>
+        </div>
+
+        <div class="card">
             <div class="card-header">
                 <span class="card-title">Backtest Results</span>
             </div>
@@ -526,21 +513,65 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 <thead>
                     <tr>
                         <th>Strategy</th>
+                        <th>Description</th>
                         <th>Expected Edge</th>
                         <th>Win Rate</th>
-                        <th>Sample Size</th>
+                        <th>Sample</th>
                         <th>Status</th>
                     </tr>
                 </thead>
-                <tbody id="backtest-table">
-                </tbody>
+                <tbody id="backtest-table"></tbody>
             </table>
         </div>
     </div>
 
+    <!-- Enter Position Modal -->
+    <div class="modal" id="enter-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-title">Enter Position</span>
+                <button class="modal-close" onclick="closeModal('enter-modal')">&times;</button>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Position Size (shares)</label>
+                <input type="number" class="form-input" id="enter-size" value="5" min="1" step="1">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Stop Loss (optional)</label>
+                <input type="number" class="form-input" id="enter-stop" placeholder="e.g., 0.30" step="0.01">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Take Profit (optional)</label>
+                <input type="number" class="form-input" id="enter-take" placeholder="e.g., 0.80" step="0.01">
+            </div>
+            <button class="btn btn-success" style="width: 100%;" onclick="confirmEnter()">Enter Position</button>
+        </div>
+    </div>
+
+    <!-- Close Position Modal -->
+    <div class="modal" id="close-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-title">Close Position</span>
+                <button class="modal-close" onclick="closeModal('close-modal')">&times;</button>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Exit Price</label>
+                <input type="number" class="form-input" id="close-price" placeholder="e.g., 0.65" step="0.01">
+            </div>
+            <button class="btn btn-danger" style="width: 100%;" onclick="confirmClose()">Close Position</button>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
     <script>
         const API = '/api';
         let refreshInterval;
+        let currentOppId = null;
+        let currentPosId = null;
+        let chart = null;
 
         async function fetchState() {
             try {
@@ -549,17 +580,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 updateUI(data);
             } catch (e) {
                 console.error('Fetch error:', e);
-            }
-        }
-
-        async function loadSampleData() {
-            try {
-                const resp = await fetch(API + '/load-sample');
-                const data = await resp.json();
-                alert('Loaded ' + data.loaded + ' markets, ' + data.opportunities + ' opportunities');
-                fetchState();
-            } catch (e) {
-                alert('Error loading sample data: ' + e);
+                showToast('Failed to fetch state', 'error');
             }
         }
 
@@ -568,6 +589,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             document.getElementById('balance').textContent = '$' + data.account_balance.toFixed(2);
             document.getElementById('markets-count').textContent = data.markets;
             document.getElementById('positions-count').textContent = data.positions.length;
+            document.getElementById('scan-count').textContent = data.scan_count;
             
             const totalPnl = data.pnl_history.reduce((a, b) => a + b, 0);
             const pnlEl = document.getElementById('total-pnl');
@@ -585,15 +607,18 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             oppCount.textContent = data.opportunities.length;
             
             if (data.opportunities.length === 0) {
-                oppTable.innerHTML = '<tr><td colspan="5" class="empty-state">No opportunities detected. Click "Load Sample Data" to load historical data.</td></tr>';
+                oppTable.innerHTML = '<tr><td colspan="5" class="empty-state">No opportunities detected. Click "Load Sample Data" to see examples.</td></tr>';
             } else {
                 oppTable.innerHTML = data.opportunities.map(opp => `
                     <tr>
-                        <td><span class="badge badge-h7">${opp.strategy}</span></td>
-                        <td title="${opp.question}">${opp.question.substring(0, 40)}...</td>
+                        <td><span class="badge badge-${opp.strategy.includes('H7') ? 'h7' : opp.strategy.includes('H2') ? 'h2' : 'h3'}">${opp.strategy}</span></td>
+                        <td title="${opp.question}">${opp.question.substring(0, 35)}...</td>
                         <td>${opp.entry_price.toFixed(3)}</td>
                         <td class="${opp.expected_edge >= 0 ? 'positive' : 'negative'}">${opp.expected_edge >= 0 ? '+' : ''}${opp.expected_edge.toFixed(4)}</td>
-                        <td><button class="btn btn-success btn-sm" onclick="enterPosition('${opp.condition_id}')">Enter</button></td>
+                        <td>
+                            <button class="btn btn-success btn-sm" onclick="openEnterModal('${opp.condition_id}')">Enter</button>
+                            <button class="btn btn-sm" style="background:var(--muted);color:white;" onclick="showPriceChart('${opp.condition_id}', '${opp.question.replace(/'/g, "\\'")}')">Chart</button>
+                        </td>
                     </tr>
                 `).join('');
             }
@@ -612,7 +637,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         <td>${pos.side}</td>
                         <td>${pos.entry_price.toFixed(3)}</td>
                         <td>${pos.size}</td>
-                        <td><button class="btn btn-danger btn-sm" onclick="closePosition('${pos.position_id}')">Close</button></td>
+                        <td><button class="btn btn-danger btn-sm" onclick="openCloseModal('${pos.position_id}')">Close</button></td>
                     </tr>
                 `).join('');
             }
@@ -625,6 +650,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     return `
                         <tr>
                             <td><span class="badge badge-${badgeClass}">${strategy}</span></td>
+                            <td>${data.description}</td>
                             <td class="positive">+${(data.edge * 100).toFixed(2)}¢/share</td>
                             <td>${(data.win_rate * 100).toFixed(0)}%</td>
                             <td>${data.sample}</td>
@@ -635,44 +661,150 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             });
         }
 
-        async function enterPosition(conditionId) {
+        async function loadSampleData() {
+            try {
+                const resp = await fetch(API + '/load-sample');
+                const data = await resp.json();
+                if (data.error) {
+                    showToast(data.error, 'error');
+                } else {
+                    showToast(`Loaded ${data.loaded} markets, ${data.opportunities} opportunities`, 'success');
+                    fetchState();
+                }
+            } catch (e) {
+                showToast('Error loading data', 'error');
+            }
+        }
+
+        async function openEnterModal(conditionId) {
+            currentOppId = conditionId;
+            document.getElementById('enter-modal').classList.add('active');
+        }
+
+        async function confirmEnter() {
+            const size = parseFloat(document.getElementById('enter-size').value);
+            const stopLoss = document.getElementById('enter-stop').value ? parseFloat(document.getElementById('enter-stop').value) : null;
+            const takeProfit = document.getElementById('enter-take').value ? parseFloat(document.getElementById('enter-take').value) : null;
+            
             try {
                 const resp = await fetch(API + '/enter-position', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({opportunity_id: conditionId, size: 5})
+                    body: JSON.stringify({opportunity_id: currentOppId, size, stop_loss: stopLoss, take_profit: takeProfit})
                 });
                 const data = await resp.json();
                 if (data.success) {
+                    closeModal('enter-modal');
+                    showToast('Position entered!', 'success');
                     fetchState();
                 }
             } catch (e) {
-                console.error('Enter position error:', e);
+                showToast('Error entering position', 'error');
             }
         }
 
-        async function closePosition(positionId) {
-            const exitPrice = prompt('Enter exit price (e.g., 0.85):', '0.50');
-            if (!exitPrice) return;
+        async function openCloseModal(positionId) {
+            currentPosId = positionId;
+            document.getElementById('close-modal').classList.add('active');
+        }
+
+        async function confirmClose() {
+            const exitPrice = parseFloat(document.getElementById('close-price').value);
+            if (isNaN(exitPrice)) {
+                showToast('Please enter a valid price', 'error');
+                return;
+            }
+            
             try {
                 const resp = await fetch(API + '/close-position', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({position_id: positionId, exit_price: parseFloat(exitPrice)})
+                    body: JSON.stringify({position_id: currentPosId, exit_price: exitPrice})
                 });
                 const data = await resp.json();
                 if (data.success) {
-                    alert('P&L: $' + data.pnl.toFixed(2));
+                    closeModal('close-modal');
+                    showToast(`P&L: $${data.pnl.toFixed(2)}`, data.pnl >= 0 ? 'success' : 'error');
                     fetchState();
                 }
             } catch (e) {
-                console.error('Close position error:', e);
+                showToast('Error closing position', 'error');
+            }
+        }
+
+        async function showPriceChart(conditionId, question) {
+            try {
+                const resp = await fetch(API + '/prices/' + conditionId);
+                const data = await resp.json();
+                if (data.error) {
+                    showToast(data.error, 'error');
+                    return;
+                }
+                
+                document.getElementById('chart-card').style.display = 'block';
+                document.getElementById('chart-title').textContent = question;
+                
+                if (chart) chart.destroy();
+                
+                const ctx = document.getElementById('price-chart').getContext('2d');
+                const labels = data.timestamps ? data.timestamps.map((_, i) => i) : data.prices.map((_, i) => i);
+                
+                chart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Price',
+                            data: data.prices,
+                            borderColor: '#3b82f6',
+                            backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                            fill: true,
+                            tension: 0.4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { display: false } },
+                        scales: {
+                            x: { display: false },
+                            y: { beginAtZero: true, max: 1 }
+                        }
+                    }
+                });
+                
+                document.getElementById('chart-card').scrollIntoView({ behavior: 'smooth' });
+            } catch (e) {
+                showToast('Error loading chart', 'error');
+            }
+        }
+
+        function closeChart() {
+            document.getElementById('chart-card').style.display = 'none';
+            if (chart) chart.destroy();
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('active');
+        }
+
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.className = 'toast ' + type + ' show';
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+
+        // Close modals on outside click
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('active');
             }
         }
 
         // Start polling
         fetchState();
-        refreshInterval = setInterval(fetchState, 30000); // Refresh every 30s
+        refreshInterval = setInterval(fetchState, 30000);
     </script>
 </body>
 </html>"""
@@ -686,10 +818,113 @@ async def scanner_task():
     """Background task that polls Polymarket and updates state."""
     import time as time_module
     
+    # Search queries for Up/Down markets
+    queries = [
+        "updown",  # General up/down markets
+        "bitcoin updown",
+        "ethereum updown",
+        "solana updown",
+    ]
+    
     while True:
         try:
             state.scan_count += 1
             state.last_scan = datetime.now(timezone.utc)
+            
+            for query in queries:
+                url = f"{POLYMARKET_SEARCH}?q={urllib.parse.quote(query)}&limit_per_type=50"
+                req = urllib.request.Request(url, headers={"User-Agent": UA})
+                try:
+                    with urllib.request.urlopen(req, timeout=30) as resp:
+                        data = json.loads(resp.read().decode())
+                        for event in data.get("events", []):
+                            for market in event.get("markets", []):
+                                cond_id = market.get("conditionId", "")
+                                if not cond_id:
+                                    continue
+                                
+                                # Check if this is an Up/Down market
+                                slug = market.get("slug", "").lower()
+                                if "updown" not in slug and "up or down" not in slug:
+                                    continue
+                                
+                                prices = market.get("outcomePrices", []) or market.get("prices", [])
+                                if not prices or len(prices) < 1:
+                                    continue
+                                
+                                try:
+                                    p_up = float(prices[0])
+                                except (TypeError, ValueError):
+                                    continue
+                                
+                                # Update or create market snapshot
+                                if cond_id in state.markets:
+                                    snap = state.markets[cond_id]
+                                    snap.price = p_up
+                                    snap.timestamp = datetime.now(timezone.utc)
+                                    snap.price_history.append(p_up)
+                                    snap.price_history = snap.price_history[-100:]
+                                else:
+                                    outcome = "Up" if "up" in slug else "Down"
+                                    state.markets[cond_id] = MarketSnapshot(
+                                        condition_id=cond_id,
+                                        question=market.get("question", "")[:60],
+                                        outcome=outcome,
+                                        price=p_up,
+                                        timestamp=datetime.now(timezone.utc),
+                                    )
+                                
+                                # Check for H7 opportunity (p in [0.5, 0.6))
+                                if 0.50 <= p_up < 0.60:
+                                    opp = Opportunity(
+                                        strategy="H7_high",
+                                        condition_id=cond_id,
+                                        question=market.get("question", "")[:60],
+                                        confidence=0.8,
+                                        entry_price=p_up,
+                                        expected_edge=0.066,
+                                        reason=f"p(Up)={p_up:.3f} in [0.5, 0.6)",
+                                    )
+                                    if not any(o.condition_id == cond_id and o.strategy == "H7_high" for o in state.opportunities):
+                                        state.opportunities.append(opp)
+                                        state.opportunities = state.opportunities[-50:]
+                                
+                                # Check for H2 opportunity (late favourite, p >= 0.70)
+                                if p_up >= 0.70:
+                                    opp = Opportunity(
+                                        strategy="H2",
+                                        condition_id=cond_id,
+                                        question=market.get("question", "")[:60],
+                                        confidence=0.7,
+                                        entry_price=p_up,
+                                        expected_edge=0.022,
+                                        reason=f"Late favourite: p(Up)={p_up:.3f} >= 0.70",
+                                    )
+                                    if not any(o.condition_id == cond_id and o.strategy == "H2" for o in state.opportunities):
+                                        state.opportunities.append(opp)
+                                        
+                                # Check for H3 opportunity (momentum - price change >= 0.12)
+                                if cond_id in state.markets:
+                                    snap = state.markets[cond_id]
+                                    if len(snap.price_history) >= 2:
+                                        prev = snap.price_history[-2]
+                                        change = abs(p_up - prev)
+                                        if change >= 0.12:
+                                            opp = Opportunity(
+                                                strategy="H3",
+                                                condition_id=cond_id,
+                                                question=market.get("question", "")[:60],
+                                                confidence=0.7,
+                                                entry_price=p_up,
+                                                expected_edge=0.022,
+                                                reason=f"Momentum: price moved {change:.3f}",
+                                            )
+                                            if not any(o.condition_id == cond_id and o.strategy == "H3" for o in state.opportunities):
+                                                state.opportunities.append(opp)
+                
+                except Exception as e:
+                    state.error_count += 1
+                    print(f"Scan error for {query}: {e}", file=sys.stderr)
         
         except Exception as e:
             print(f"Scanner error: {e}", file=sys.stderr)
