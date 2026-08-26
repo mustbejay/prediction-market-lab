@@ -561,6 +561,36 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         .live-btn { background: var(--success); color: white; border: none; }
         .live-btn.active { background: var(--warning); }
         .live-btn:hover { opacity: 0.9; }
+        /* Trading Mode Toggle */
+        .mode-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+        }
+        .mode-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--muted-foreground);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .mode-label.paper { color: var(--accent); }
+        .mode-label.live { color: var(--warning); }
+        .mode-btn {
+            background: none;
+            border: 1px solid var(--border);
+            color: var(--foreground);
+            padding: 4px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .mode-btn:hover { background: var(--border); }
+        .mode-btn.live { background: var(--warning); color: white; border: none; }
         .chart-container { position: relative; height: 300px; margin-top: 20px; }
         .modal {
             display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
@@ -764,7 +794,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 const resp = await fetch(API + '/state');
                 const data = await resp.json();
                 liveEnabled = data.live_prices_enabled;
+                tradingMode = data.trading_mode || 'paper';
                 updateLiveStatus(liveEnabled);
+                updateTradingModeUI(tradingMode);
                 updateUI(data);
             } catch (e) {
                 console.error('Fetch error:', e);
@@ -785,6 +817,44 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 badge.className = 'status-badge status-offline';
                 btn.textContent = 'Enable Live Prices';
                 btn.classList.remove('active');
+            }
+        }
+
+        // Trading mode management
+        let tradingMode = 'paper';
+        
+        function updateTradingModeUI(mode) {
+            const label = document.getElementById('mode-label');
+            const btn = document.getElementById('mode-btn');
+            tradingMode = mode;
+            if (mode === 'live') {
+                label.textContent = 'LIVE MODE';
+                label.className = 'mode-label live';
+                btn.textContent = 'Switch to PAPER';
+                btn.classList.add('live');
+            } else {
+                label.textContent = 'PAPER MODE';
+                label.className = 'mode-label paper';
+                btn.textContent = 'Switch to LIVE';
+                btn.classList.remove('live');
+            }
+        }
+
+        async function toggleTradingMode() {
+            const newMode = tradingMode === 'paper' ? 'live' : 'paper';
+            try {
+                const resp = await fetch(API + '/set-mode', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({mode: newMode})
+                });
+                const data = await resp.json();
+                if (data.success) {
+                    updateTradingModeUI(data.trading_mode);
+                    showToast(`Switched to ${data.trading_mode.toUpperCase()} mode`, 'success');
+                }
+            } catch (e) {
+                showToast('Error switching mode', 'error');
             }
         }
 
