@@ -83,6 +83,7 @@ class DashboardState:
     scan_count: int = 0
     error_count: int = 0
     live_prices_enabled: bool = False
+    trading_mode: str = "paper"  # "paper" or "live"
 
 
 # ============================================================================
@@ -129,6 +130,7 @@ async def get_state():
         "scan_count": state.scan_count,
         "error_count": state.error_count,
         "live_prices_enabled": state.live_prices_enabled,
+        "trading_mode": state.trading_mode,
         "config": config,
     }
 
@@ -222,7 +224,20 @@ async def get_markets():
     ]
 
 
-@app.get("/api/load-sample")
+@app.post("/api/set-mode")
+async def set_trading_mode(req: dict):
+    """Set trading mode (paper/live)."""
+    mode = req.get("mode", "paper")
+    if mode not in ["paper", "live"]:
+        raise HTTPException(status_code=400, detail="Invalid mode. Use 'paper' or 'live'")
+    state.trading_mode = mode
+    return {"success": True, "trading_mode": mode}
+
+
+@app.get("/api/mode")
+async def get_trading_mode():
+    """Get current trading mode."""
+    return {"trading_mode": state.trading_mode}
 async def load_sample_data():
     """Load sample data from historical snapshots for demo."""
     # First try live Limitless API
