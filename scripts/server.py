@@ -1,22 +1,20 @@
 #!/usr/bin/env python3
-"""FastAPI server for prediction market dashboard with live API."""
+"""FastAPI server for prediction market dashboard with LIVE Polymarket CLOB API."""
 
 import json
 import sys
 import asyncio
 import urllib.request
 import urllib.parse
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone
 from pathlib import Path
 from collections import defaultdict
 from dataclasses import dataclass, field, asdict
 from typing import Optional
 import uuid
-import statistics
 
 from fastapi import FastAPI, HTTPException
-from fastapi.staticfiles import StaticFiles
-from fastapi.responses import HTMLResponse, FileResponse
+from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 
 
@@ -24,8 +22,8 @@ from pydantic import BaseModel
 # CONFIGURATION
 # ============================================================================
 
-POLYMARKET_SEARCH = "https://gamma-api.polymarket.com/public-search"
-POLYMARKET_MARKETS = "https://gamma-api.polymarket.com/markets"
+POLYMARKET_GAMMA = "https://gamma-api.polymarket.com"
+POLYMARKET_CLOB = "https://clob.polymarket.com"
 UA = "predictions-lab/0.1 (+scanner)"
 DATA_DIR = Path(__file__).parent.parent / "data"
 
@@ -44,6 +42,7 @@ class MarketSnapshot:
     price_history: list[float] = field(default_factory=list)
     volume_24h: float = 0.0
     open_interest: float = 0.0
+    token_id: str = ""
 
 
 @dataclass
@@ -83,6 +82,7 @@ class DashboardState:
     last_scan: Optional[datetime] = None
     scan_count: int = 0
     error_count: int = 0
+    live_prices_enabled: bool = False
 
 
 # ============================================================================
@@ -128,6 +128,7 @@ async def get_state():
         "last_scan": state.last_scan.isoformat() if state.last_scan else None,
         "scan_count": state.scan_count,
         "error_count": state.error_count,
+        "live_prices_enabled": state.live_prices_enabled,
         "config": config,
     }
 
@@ -215,6 +216,7 @@ async def get_markets():
             "price": v.price,
             "volume": v.volume_24h,
             "timestamp": v.timestamp.isoformat(),
+            "token_id": v.token_id,
         }
         for k, v in list(state.markets.items())[-50:]
     ]
@@ -292,6 +294,63 @@ async def get_price_history(condition_id: str):
     return {"prices": snap.price_history[-100:], "timestamps": [snap.timestamp.isoformat()]}
 
 
+@app.get("/api/fetch-live")
+async def fetch_live_prices():
+    """Fetch live prices from Polymarket CLOB API."""
+    fetched = 0
+    errors = 0
+    
+    # Get all markets from state
+    markets_to_check = list(state.markets.items())[:100]  # Limit to 100
+    
+    for cond_id, snap in markets_to_check:
+        try:
+            # Try to get price from CLOB API using condition_id as token_id
+            url = f"{POLYMARKET_CLOB}/price?token_id={cond_id}&side=BUY"
+            req = urllib.request.Request(url, headers={"User-Agent": UA})
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                data = json.loads(resp.read().decode())
+                if "price" in data:
+                    p = float(data["price"])
+                    if 0 < p < 1:  # Valid price
+                        snap.price = p
+                        snap.timestamp = datetime.now(timezone.utc)
+                        snap.price_history.append(p)
+                        snap.price_history = snap.price_history[-100:]
+                        fetched += 1
+                        
+                        # Check for opportunities
+                        if 0.50 <= p < 0.60:
+                            opp = Opportunity(
+                                strategy="H7_high", condition_id=cond_id,
+                                question=snap.question, confidence=0.8,
+                                entry_price=p, expected_edge=0.066,
+                                reason=f"Live: p(Up)={p:.3f}",
+                            )
+                            if not any(o.condition_id == cond_id and o.strategy == "H7_high" for o in state.opportunities):
+                                state.opportunities.append(opp)
+                                state.opportunities = state.opportunities[-50:]
+        except Exception as e:
+            errors += 1
+    
+    state.live_prices_enabled = fetched > 0
+    return {"fetched": fetched, "errors": errors, "total_markets": len(state.markets)}
+
+
+@app.post("/api/enable-live")
+async def enable_live_prices():
+    """Enable live price fetching."""
+    state.live_prices_enabled = True
+    return {"success": True, "live_prices_enabled": state.live_prices_enabled}
+
+
+@app.post("/api/disable-live")
+async def disable_live_prices():
+    """Disable live price fetching."""
+    state.live_prices_enabled = False
+    return {"success": True, "live_prices_enabled": state.live_prices_enabled}
+
+
 # ============================================================================
 # HTML TEMPLATE
 # ============================================================================
@@ -358,6 +417,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         .badge-h7 { background: #3b82f6; color: white; }
         .badge-h2 { background: #22c55e; color: white; }
         .badge-h3 { background: #f59e0b; color: black; }
+        .badge-live { background: var(--success); color: white; }
         table { width: 100%; border-collapse: collapse; }
         th, td { padding: 12px; text-align: left; border-bottom: 1px solid var(--border); }
         th { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
@@ -377,13 +437,16 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
         .live-dot { display: inline-block; width: 8px; height: 8px; background: var(--success); border-radius: 50%; margin-right: 8px; }
         .controls { display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
-        .refresh-btn, .load-btn {
+        .refresh-btn, .load-btn, .live-btn {
             background: none; border: 1px solid var(--border); color: var(--foreground);
             padding: 8px 16px; border-radius: 6px; cursor: pointer;
         }
-        .refresh-btn:hover, .load-btn:hover { background: var(--border); }
+        .refresh-btn:hover, .load-btn:hover, .live-btn:hover { background: var(--border); }
         .load-btn { background: var(--accent); color: white; border: none; }
         .load-btn:hover { opacity: 0.9; }
+        .live-btn { background: var(--success); color: white; border: none; }
+        .live-btn.active { background: var(--warning); }
+        .live-btn:hover { opacity: 0.9; }
         .chart-container { position: relative; height: 300px; margin-top: 20px; }
         .modal {
             display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
@@ -411,6 +474,12 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         .toast.show { transform: translateY(0); opacity: 1; }
         .toast.success { border-color: var(--success); }
         .toast.error { border-color: var(--danger); }
+        .status-badge {
+            display: inline-block; padding: 4px 12px; border-radius: 4px;
+            font-size: 12px; font-weight: 500; margin-left: 12px;
+        }
+        .status-live { background: var(--success); color: white; }
+        .status-offline { background: var(--muted); color: white; }
     </style>
 </head>
 <body>
@@ -419,12 +488,14 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             <h1><span class="live-dot pulse"></span>Prediction Market Lab</h1>
             <div style="display: flex; align-items: center; gap: 16px;">
                 <span id="last-scan" style="color: var(--muted); font-size: 14px;"></span>
+                <span id="live-status" class="status-badge status-offline">OFFLINE</span>
                 <button class="refresh-btn" onclick="fetchState()">Refresh</button>
             </div>
         </header>
 
         <div class="controls">
             <button class="load-btn" onclick="loadSampleData()">Load Sample Data</button>
+            <button class="live-btn" id="live-btn" onclick="toggleLivePrices()">Enable Live Prices</button>
             <button class="refresh-btn" onclick="fetchState()">Refresh State</button>
         </div>
 
@@ -572,15 +643,34 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         let currentOppId = null;
         let currentPosId = null;
         let chart = null;
+        let liveEnabled = false;
 
         async function fetchState() {
             try {
                 const resp = await fetch(API + '/state');
                 const data = await resp.json();
+                liveEnabled = data.live_prices_enabled;
+                updateLiveStatus(liveEnabled);
                 updateUI(data);
             } catch (e) {
                 console.error('Fetch error:', e);
                 showToast('Failed to fetch state', 'error');
+            }
+        }
+
+        function updateLiveStatus(enabled) {
+            const badge = document.getElementById('live-status');
+            const btn = document.getElementById('live-btn');
+            if (enabled) {
+                badge.textContent = 'LIVE';
+                badge.className = 'status-badge status-live';
+                btn.textContent = 'Disable Live Prices';
+                btn.classList.add('active');
+            } else {
+                badge.textContent = 'OFFLINE';
+                badge.className = 'status-badge status-offline';
+                btn.textContent = 'Enable Live Prices';
+                btn.classList.remove('active');
             }
         }
 
@@ -673,6 +763,23 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 }
             } catch (e) {
                 showToast('Error loading data', 'error');
+            }
+        }
+
+        async function toggleLivePrices() {
+            try {
+                if (liveEnabled) {
+                    await fetch(API + '/disable-live', { method: 'POST' });
+                } else {
+                    await fetch(API + '/enable-live', { method: 'POST' });
+                    // Fetch live prices
+                    const resp = await fetch(API + '/fetch-live');
+                    const data = await resp.json();
+                    showToast(`Fetched ${data.fetched} live prices, ${data.errors} errors`, data.errors === 0 ? 'success' : 'error');
+                }
+                fetchState();
+            } catch (e) {
+                showToast('Error toggling live prices', 'error');
             }
         }
 
@@ -815,133 +922,68 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 # ============================================================================
 
 async def scanner_task():
-    """Background task that polls Polymarket and updates state."""
+    """Background task that polls Polymarket CLOB API for live prices."""
     import time as time_module
     
     while True:
         try:
-            state.scan_count += 1
-            state.last_scan = datetime.now(timezone.utc)
-            
-            # Try multiple approaches to find active markets
-            queries = [
-                ("public-search", "updown"),
-                ("markets", "active=true&limit=100"),
-            ]
-            
-            for source, query in queries:
-                try:
-                    if source == "public-search":
-                        url = f"{POLYMARKET_SEARCH}?q={urllib.parse.quote(query)}&limit_per_type=50"
-                    else:
-                        url = f"{POLYMARKET_MARKETS}?{query}"
-                    
-                    req = urllib.request.Request(url, headers={"User-Agent": UA})
-                    with urllib.request.urlopen(req, timeout=30) as resp:
-                        data = json.loads(resp.read().decode())
-                        
-                        if source == "public-search":
-                            events = data.get("events", [])
-                        else:
-                            events = [{"markets": data}] if isinstance(data, list) else []
-                        
-                        market_count = 0
-                        active_count = 0
-                        
-                        for event in events:
-                            for market in event.get("markets", []):
-                                cond_id = market.get("conditionId", "")
-                                if not cond_id:
-                                    continue
-                                
-                                market_count += 1
-                                slug = market.get("slug", "").lower()
-                                prices = market.get("outcomePrices", []) or market.get("prices", [])
-                                
-                                if not prices or len(prices) < 1:
-                                    continue
-                                
-                                try:
-                                    p_up = float(prices[0])
-                                except (TypeError, ValueError):
-                                    continue
-                                
-                                # Only process active markets (price between 0 and 1, exclusive)
-                                if p_up <= 0 or p_up >= 1:
-                                    continue
-                                
-                                active_count += 1
-                                
-                                # Update or create market snapshot
-                                if cond_id in state.markets:
-                                    snap = state.markets[cond_id]
-                                    snap.price = p_up
-                                    snap.timestamp = datetime.now(timezone.utc)
-                                    snap.price_history.append(p_up)
-                                    snap.price_history = snap.price_history[-100:]
-                                else:
-                                    outcome = "Up" if "up" in slug else "Down"
-                                    state.markets[cond_id] = MarketSnapshot(
-                                        condition_id=cond_id,
-                                        question=market.get("question", "")[:60],
-                                        outcome=outcome,
-                                        price=p_up,
-                                        timestamp=datetime.now(timezone.utc),
-                                    )
-                                
-                                # Check for H7 opportunity (p in [0.5, 0.6))
-                                if 0.50 <= p_up < 0.60:
-                                    opp = Opportunity(
-                                        strategy="H7_high",
-                                        condition_id=cond_id,
-                                        question=market.get("question", "")[:60],
-                                        confidence=0.8,
-                                        entry_price=p_up,
-                                        expected_edge=0.066,
-                                        reason=f"p(Up)={p_up:.3f} in [0.5, 0.6)",
-                                    )
-                                    if not any(o.condition_id == cond_id and o.strategy == "H7_high" for o in state.opportunities):
-                                        state.opportunities.append(opp)
-                                        state.opportunities = state.opportunities[-50:]
-                                
-                                # Check for H2 opportunity (late favourite, p >= 0.70)
-                                if p_up >= 0.70:
-                                    opp = Opportunity(
-                                        strategy="H2",
-                                        condition_id=cond_id,
-                                        question=market.get("question", "")[:60],
-                                        confidence=0.7,
-                                        entry_price=p_up,
-                                        expected_edge=0.022,
-                                        reason=f"Late favourite: p(Up)={p_up:.3f} >= 0.70",
-                                    )
-                                    if not any(o.condition_id == cond_id and o.strategy == "H2" for o in state.opportunities):
-                                        state.opportunities.append(opp)
-                                        
-                                # Check for H3 opportunity (momentum - price change >= 0.12)
-                                if cond_id in state.markets:
-                                    snap = state.markets[cond_id]
-                                    if len(snap.price_history) >= 2:
-                                        prev = snap.price_history[-2]
-                                        change = abs(p_up - prev)
-                                        if change >= 0.12:
-                                            opp = Opportunity(
-                                                strategy="H3",
-                                                condition_id=cond_id,
-                                                question=market.get("question", "")[:60],
-                                                confidence=0.7,
-                                                entry_price=p_up,
-                                                expected_edge=0.022,
-                                                reason=f"Momentum: price moved {change:.3f}",
-                                            )
-                                            if not any(o.condition_id == cond_id and o.strategy == "H3" for o in state.opportunities):
-                                                state.opportunities.append(opp)
-                        
-                        print(f"[SCAN] {source}: Markets={market_count}, Active={active_count}", file=sys.stderr)
+            if state.live_prices_enabled and state.scan_count % 10 == 0:  # Every 10 scans
+                state.scan_count += 1
+                state.last_scan = datetime.now(timezone.utc)
                 
-                except Exception as e:
-                    state.error_count += 1
-                    print(f"Scan error ({source}): {e}", file=sys.stderr)
+                # Fetch live prices for all tracked markets
+                fetched = 0
+                errors = 0
+                
+                for cond_id, snap in list(state.markets.items())[:50]:  # Limit to 50
+                    try:
+                        # Try CLOB API with condition_id as token_id
+                        url = f"{POLYMARKET_CLOB}/price?token_id={cond_id}&side=BUY"
+                        req = urllib.request.Request(url, headers={"User-Agent": UA})
+                        with urllib.request.urlopen(req, timeout=5) as resp:
+                            data = json.loads(resp.read().decode())
+                            if "price" in data:
+                                p = float(data["price"])
+                                if 0 < p < 1:  # Valid price
+                                    snap.price = p
+                                    snap.timestamp = datetime.now(timezone.utc)
+                                    snap.price_history.append(p)
+                                    snap.price_history = snap.price_history[-100:]
+                                    fetched += 1
+                                    
+                                    # Check for opportunities
+                                    if 0.50 <= p < 0.60:
+                                        opp = Opportunity(
+                                            strategy="H7_high",
+                                            condition_id=cond_id,
+                                            question=snap.question,
+                                            confidence=0.8,
+                                            entry_price=p,
+                                            expected_edge=0.066,
+                                            reason=f"Live: p(Up)={p:.3f}",
+                                        )
+                                        if not any(o.condition_id == cond_id and o.strategy == "H7_high" for o in state.opportunities):
+                                            state.opportunities.append(opp)
+                                            state.opportunities = state.opportunities[-50:]
+                                    
+                                    if p >= 0.70:
+                                        opp = Opportunity(
+                                            strategy="H2",
+                                            condition_id=cond_id,
+                                            question=snap.question,
+                                            confidence=0.7,
+                                            entry_price=p,
+                                            expected_edge=0.022,
+                                            reason=f"Live: Late fav p(Up)={p:.3f}",
+                                        )
+                                        if not any(o.condition_id == cond_id and o.strategy == "H2" for o in state.opportunities):
+                                            state.opportunities.append(opp)
+                    
+                    except Exception as e:
+                        errors += 1
+                
+                if fetched > 0 or errors > 0:
+                    print(f"[LIVE] Fetched: {fetched}, Errors: {errors}", file=sys.stderr)
         
         except Exception as e:
             print(f"Scanner error: {e}", file=sys.stderr)
