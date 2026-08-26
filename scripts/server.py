@@ -296,23 +296,22 @@ async def get_price_history(condition_id: str):
 
 @app.get("/api/fetch-live")
 async def fetch_live_prices():
-    """Fetch live prices from Polymarket CLOB API."""
+    """Fetch live prices from Polymarket CLOB API and Kalshi."""
     fetched = 0
     errors = 0
     
-    # Get all markets from state
-    markets_to_check = list(state.markets.items())[:100]  # Limit to 100
+    # Try Polymarket CLOB first
+    markets_to_check = list(state.markets.items())[:50]
     
     for cond_id, snap in markets_to_check:
         try:
-            # Try to get price from CLOB API using condition_id as token_id
             url = f"{POLYMARKET_CLOB}/price?token_id={cond_id}&side=BUY"
             req = urllib.request.Request(url, headers={"User-Agent": UA})
-            with urllib.request.urlopen(req, timeout=10) as resp:
+            with urllib.request.urlopen(req, timeout=5) as resp:
                 data = json.loads(resp.read().decode())
                 if "price" in data:
                     p = float(data["price"])
-                    if 0 < p < 1:  # Valid price
+                    if 0 < p < 1:
                         snap.price = p
                         snap.timestamp = datetime.now(timezone.utc)
                         snap.price_history.append(p)
@@ -325,13 +324,66 @@ async def fetch_live_prices():
                                 strategy="H7_high", condition_id=cond_id,
                                 question=snap.question, confidence=0.8,
                                 entry_price=p, expected_edge=0.066,
-                                reason=f"Live: p(Up)={p:.3f}",
+                                reason=f"Live P: p={p:.3f}",
                             )
                             if not any(o.condition_id == cond_id and o.strategy == "H7_high" for o in state.opportunities):
                                 state.opportunities.append(opp)
                                 state.opportunities = state.opportunities[-50:]
-        except Exception as e:
+                        
+                        if p >= 0.70:
+                            opp = Opportunity(
+                                strategy="H2", condition_id=cond_id,
+                                question=snap.question, confidence=0.7,
+                                entry_price=p, expected_edge=0.022,
+                                reason=f"Live P: Late fav p={p:.3f}",
+                            )
+                            if not any(o.condition_id == cond_id and o.strategy == "H2" for o in state.opportunities):
+                                state.opportunities.append(opp)
+        except:
             errors += 1
+    
+    # Try Kalshi as fallback
+    try:
+        from scripts.kalshi_client import fetch_kalshi_markets
+        kalshi_markets = fetch_kalshi_markets()
+        
+        for km in kalshi_markets[:20]:
+            # Create synthetic condition_id from ticker
+            cond_id = f"kalshi_{km['ticker']}"
+            
+            # Check for opportunities
+            if 0.50 <= km["price"] < 0.60:
+                opp = Opportunity(
+                    strategy="H7_high", condition_id=cond_id,
+                    question=km["question"], confidence=0.7,
+                    entry_price=km["price"], expected_edge=0.066,
+                    reason=f"Kalshi: p={km['price']:.3f}",
+                )
+                state.opportunities.append(opp)
+            
+            if km["price"] >= 0.70:
+                opp = Opportunity(
+                    strategy="H2", condition_id=cond_id,
+                    question=km["question"], confidence=0.7,
+                    entry_price=km["price"], expected_edge=0.022,
+                    reason=f"Kalshi: Late fav p={km['price']:.3f}",
+                )
+                state.opportunities.append(opp)
+            
+            # Add to markets
+            state.markets[cond_id] = MarketSnapshot(
+                condition_id=cond_id,
+                question=km["question"],
+                outcome="Up" if km["price"] < 0.5 else "Down",
+                price=km["price"],
+                timestamp=datetime.now(timezone.utc),
+                price_history=[km["price"]],
+                volume_24h=km["volume"],
+            )
+            fetched += 1
+            
+    except Exception as e:
+        print(f"Kalshi fetch error: {e}", file=sys.stderr)
     
     state.live_prices_enabled = fetched > 0
     return {"fetched": fetched, "errors": errors, "total_markets": len(state.markets)}
