@@ -818,37 +818,46 @@ async def scanner_task():
     """Background task that polls Polymarket and updates state."""
     import time as time_module
     
-    # Search queries for Up/Down markets
-    queries = [
-        "updown",  # General up/down markets
-        "bitcoin updown",
-        "ethereum updown",
-        "solana updown",
-    ]
-    
     while True:
         try:
             state.scan_count += 1
             state.last_scan = datetime.now(timezone.utc)
             
-            for query in queries:
-                url = f"{POLYMARKET_SEARCH}?q={urllib.parse.quote(query)}&limit_per_type=50"
-                req = urllib.request.Request(url, headers={"User-Agent": UA})
+            # Try multiple approaches to find active markets
+            queries = [
+                ("public-search", "updown"),
+                ("markets", "active=true&limit=100"),
+            ]
+            
+            for source, query in queries:
                 try:
+                    if source == "public-search":
+                        url = f"{POLYMARKET_SEARCH}?q={urllib.parse.quote(query)}&limit_per_type=50"
+                    else:
+                        url = f"{POLYMARKET_MARKETS}?{query}"
+                    
+                    req = urllib.request.Request(url, headers={"User-Agent": UA})
                     with urllib.request.urlopen(req, timeout=30) as resp:
                         data = json.loads(resp.read().decode())
-                        for event in data.get("events", []):
+                        
+                        if source == "public-search":
+                            events = data.get("events", [])
+                        else:
+                            events = [{"markets": data}] if isinstance(data, list) else []
+                        
+                        market_count = 0
+                        active_count = 0
+                        
+                        for event in events:
                             for market in event.get("markets", []):
                                 cond_id = market.get("conditionId", "")
                                 if not cond_id:
                                     continue
                                 
-                                # Check if this is an Up/Down market
+                                market_count += 1
                                 slug = market.get("slug", "").lower()
-                                if "updown" not in slug and "up or down" not in slug:
-                                    continue
-                                
                                 prices = market.get("outcomePrices", []) or market.get("prices", [])
+                                
                                 if not prices or len(prices) < 1:
                                     continue
                                 
@@ -856,6 +865,12 @@ async def scanner_task():
                                     p_up = float(prices[0])
                                 except (TypeError, ValueError):
                                     continue
+                                
+                                # Only process active markets (price between 0 and 1, exclusive)
+                                if p_up <= 0 or p_up >= 1:
+                                    continue
+                                
+                                active_count += 1
                                 
                                 # Update or create market snapshot
                                 if cond_id in state.markets:
@@ -921,10 +936,12 @@ async def scanner_task():
                                             )
                                             if not any(o.condition_id == cond_id and o.strategy == "H3" for o in state.opportunities):
                                                 state.opportunities.append(opp)
+                        
+                        print(f"[SCAN] {source}: Markets={market_count}, Active={active_count}", file=sys.stderr)
                 
                 except Exception as e:
                     state.error_count += 1
-                    print(f"Scan error for {query}: {e}", file=sys.stderr)
+                    print(f"Scan error ({source}): {e}", file=sys.stderr)
         
         except Exception as e:
             print(f"Scanner error: {e}", file=sys.stderr)
